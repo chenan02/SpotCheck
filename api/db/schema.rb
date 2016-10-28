@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20161028003222) do
     t.string   "name"
     t.float    "occupancy"
     t.string   "address"
-    t.string   "type"
+    t.string   "category"
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

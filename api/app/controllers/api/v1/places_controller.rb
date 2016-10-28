@@ -25,7 +25,9 @@ class Api::V1::PlacesController < ApplicationController
 
     def update
         @place = Place.where(address: params[:address])
-        if @place.update(occupancy: params[:occupancy])
+        #fix this
+        average = (params[:occupancy] + @place.occupancy)/2
+        if @place.update(occupancy: average)
             # redirect
         else
             # redirect to edit
