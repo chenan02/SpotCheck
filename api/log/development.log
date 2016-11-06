@@ -1068,3 +1068,79 @@ Processing by Api::V1::PlacesController#show as JSON
 Completed 200 OK in 252ms (Views: 6.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/v1/places" for ::1 at 2016-11-05 11:52:29 -0400
+Processing by Api::V1::PlacesController#index as JSON
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (2.4ms)
+Completed 200 OK in 646ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/places" for ::1 at 2016-11-06 09:39:32 -0500
+Processing by Api::V1::PlacesController#index as JSON
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (can't convert nil into Float):
+  
+app/controllers/api/v1/places_controller.rb:11:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.6ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&type=restaurant" for ::1 at 2016-11-06 09:40:14 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "type"=>"restaurant"}
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&type=restaurant" for ::1 at 2016-11-06 09:40:21 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "type"=>"restaurant"}
+Completed   in 55706ms (ActiveRecord: 0.0ms)
+
+
+Completed   in 49281ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&type=restaurant" for ::1 at 2016-11-06 09:41:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "type"=>"restaurant"}
+Completed   in 53570ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/places" for ::1 at 2016-11-06 09:42:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::PlacesController#index as JSON
+Completed 500 Internal Server Error in 60028ms (ActiveRecord: 0.0ms)
+
+
+  
+Net::OpenTimeout (execution expired):
+  
+app/controllers/api/v1/places_controller.rb:11:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.6ms)
+Started GET "/v1/places" for ::1 at 2016-11-06 09:44:54 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (7.9ms)
+Completed 200 OK in 605ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&type=restaurant" for ::1 at 2016-11-06 09:45:51 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "type"=>"restaurant"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (2.5ms)
+Completed 200 OK in 480ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+

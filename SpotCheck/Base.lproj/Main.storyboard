@@ -70,50 +70,6 @@
             <point key="canvasLocation" x="2194.4000000000001" y="306.29685157421289"/>
         </scene>
         <!--View Controller-->
-<<<<<<< HEAD
-        <scene sceneID="7mr-jC-tGS">
-            <objects>
-                <viewController id="Sx6-eI-L00" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bWV-DV-oGA"/>
-                        <viewControllerLayoutGuide type="bottom" id="zCM-Nc-j1h"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XUX-47-bXc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbn-HK-6DV">
-                                <frame key="frameInset" minX="164" minY="278" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bnh-do-aMw">
-                                <frame key="frameInset" minX="67" minY="54" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lfV-vd-xmY">
-                                <frame key="frameInset" minY="539" width="113" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pnM-Vv-2EE">
-                                <frame key="frameInset" minX="208" minY="531" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ul-uI-jgu">
-                                <frame key="frameInset" minX="139" minY="346" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nT1-aF-cGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-714.39999999999998" y="-63.418290854572717"/>
-=======
         <scene sceneID="Vfs-3u-c5s">
             <objects>
                 <viewController id="ePd-33-1eV" sceneMemberID="viewController">
@@ -209,7 +165,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Op9-ll-qzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-823.20000000000005" y="-52.623688155922046"/>
->>>>>>> e0b81a64e1c1e53e9f1fcc5a739722a3e4bc3a27
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3Ug-51-bRL">
