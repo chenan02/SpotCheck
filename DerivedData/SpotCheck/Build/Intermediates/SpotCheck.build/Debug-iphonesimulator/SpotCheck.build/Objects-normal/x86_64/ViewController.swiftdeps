@@ -1,0 +1,503 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Tester"
+provides-nominal:
+- "C9SpotCheck6Tester"
+provides-member:
+- ["C9SpotCheck6Tester", ""]
+provides-dynamic-lookup:
+- "viewDidLoad"
+- "didReceiveMemoryWarning"
+- "loadView"
+depends-top-level:
+- !private "GMSCameraPosition"
+- !private "CLLocationCoordinate2D"
+- !private "StringLiteralType"
+- "UIViewController"
+- !private "GMSMapView"
+- !private "BooleanLiteralType"
+- "Tester"
+- !private "CGRect"
+- "AssignmentPrecedence"
+- !private "GMSMarker"
+depends-member:
+- !private ["Ps9AnyObject", "CGRect"]
+- !private ["Ps9AnyObject", "CLLocationCoordinate2D"]
+- !private ["Ps9AnyObject", "GMSCameraPosition"]
+- !private ["Ps9AnyObject", "GMSMapView"]
+- !private ["Ps9AnyObject", "GMSMarker"]
+- !private ["Ps9AnyObject", "camera"]
+- ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isMyLocationEnabled"]
+- ["Ps9AnyObject", "loadView"]
+- !private ["Ps9AnyObject", "map"]
+- !private ["Ps9AnyObject", "position"]
+- !private ["Ps9AnyObject", "snippet"]
+- !private ["Ps9AnyObject", "title"]
+- !private ["Ps9AnyObject", "view"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- ["Sb", "deinit"]
+- !private ["PSo15CALayerDelegate", "isMyLocationEnabled"]
+- !private ["PSo15CALayerDelegate", "map"]
+- ["VSC6CGRect", "deinit"]
+- !private ["VSC6CGRect", "zero"]
+- ["VSC22CLLocationCoordinate2D", "deinit"]
+- !private ["VSC22CLLocationCoordinate2D", "init"]
+- !private ["Ps7CVarArg", "CGRect"]
+- !private ["Ps7CVarArg", "CLLocationCoordinate2D"]
+- !private ["Ps7CVarArg", "GMSCameraPosition"]
+- !private ["Ps7CVarArg", "GMSMapView"]
+- !private ["Ps7CVarArg", "GMSMarker"]
+- !private ["Ps7CVarArg", "camera"]
+- ["Ps7CVarArg", "didReceiveMemoryWarning"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isMyLocationEnabled"]
+- ["Ps7CVarArg", "loadView"]
+- !private ["Ps7CVarArg", "map"]
+- !private ["Ps7CVarArg", "position"]
+- !private ["Ps7CVarArg", "snippet"]
+- !private ["Ps7CVarArg", "title"]
+- !private ["Ps7CVarArg", "view"]
+- ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "CGRect"]
+- !private ["Ps28CustomDebugStringConvertible", "CLLocationCoordinate2D"]
+- !private ["Ps28CustomDebugStringConvertible", "GMSCameraPosition"]
+- !private ["Ps28CustomDebugStringConvertible", "GMSMapView"]
+- !private ["Ps28CustomDebugStringConvertible", "GMSMarker"]
+- !private ["Ps28CustomDebugStringConvertible", "camera"]
+- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isMyLocationEnabled"]
+- ["Ps28CustomDebugStringConvertible", "loadView"]
+- !private ["Ps28CustomDebugStringConvertible", "map"]
+- !private ["Ps28CustomDebugStringConvertible", "position"]
+- !private ["Ps28CustomDebugStringConvertible", "snippet"]
+- !private ["Ps28CustomDebugStringConvertible", "title"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- !private ["Ps28CustomDebugStringConvertible", "zero"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "zero"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "zero"]
+- !private ["Ps23CustomStringConvertible", "CGRect"]
+- !private ["Ps23CustomStringConvertible", "CLLocationCoordinate2D"]
+- !private ["Ps23CustomStringConvertible", "GMSCameraPosition"]
+- !private ["Ps23CustomStringConvertible", "GMSMapView"]
+- !private ["Ps23CustomStringConvertible", "GMSMarker"]
+- !private ["Ps23CustomStringConvertible", "camera"]
+- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isMyLocationEnabled"]
+- ["Ps23CustomStringConvertible", "loadView"]
+- !private ["Ps23CustomStringConvertible", "map"]
+- !private ["Ps23CustomStringConvertible", "position"]
+- !private ["Ps23CustomStringConvertible", "snippet"]
+- !private ["Ps23CustomStringConvertible", "title"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Sd", "deinit"]
+- !private ["Ps9Equatable", "CGRect"]
+- !private ["Ps9Equatable", "CLLocationCoordinate2D"]
+- !private ["Ps9Equatable", "GMSCameraPosition"]
+- !private ["Ps9Equatable", "GMSMapView"]
+- !private ["Ps9Equatable", "GMSMarker"]
+- !private ["Ps9Equatable", "camera"]
+- ["Ps9Equatable", "didReceiveMemoryWarning"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isMyLocationEnabled"]
+- ["Ps9Equatable", "loadView"]
+- !private ["Ps9Equatable", "map"]
+- !private ["Ps9Equatable", "position"]
+- !private ["Ps9Equatable", "snippet"]
+- !private ["Ps9Equatable", "title"]
+- !private ["Ps9Equatable", "view"]
+- ["Ps9Equatable", "viewDidLoad"]
+- !private ["Ps9Equatable", "zero"]
+- ["Ps9Equatable", ""]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["Sf", "deinit"]
+- !private ["CSo17GMSCameraPosition", "camera"]
+- ["CSo17GMSCameraPosition", "deinit"]
+- ["CSo10GMSMapView", "deinit"]
+- !private ["CSo10GMSMapView", "isMyLocationEnabled"]
+- !private ["CSo10GMSMapView", "map"]
+- ["CSo9GMSMarker", "deinit"]
+- !private ["CSo9GMSMarker", "init"]
+- !private ["CSo9GMSMarker", "map"]
+- !private ["CSo9GMSMarker", "position"]
+- !private ["CSo9GMSMarker", "snippet"]
+- !private ["CSo9GMSMarker", "title"]
+- !private ["CSo10GMSOverlay", "init"]
+- !private ["CSo10GMSOverlay", "map"]
+- !private ["CSo10GMSOverlay", "position"]
+- !private ["CSo10GMSOverlay", "snippet"]
+- !private ["CSo10GMSOverlay", "title"]
+- !private ["Ps8Hashable", "CGRect"]
+- !private ["Ps8Hashable", "CLLocationCoordinate2D"]
+- !private ["Ps8Hashable", "GMSCameraPosition"]
+- !private ["Ps8Hashable", "GMSMapView"]
+- !private ["Ps8Hashable", "GMSMarker"]
+- !private ["Ps8Hashable", "camera"]
+- ["Ps8Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isMyLocationEnabled"]
+- ["Ps8Hashable", "loadView"]
+- !private ["Ps8Hashable", "map"]
+- !private ["Ps8Hashable", "position"]
+- !private ["Ps8Hashable", "snippet"]
+- !private ["Ps8Hashable", "title"]
+- !private ["Ps8Hashable", "view"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- ["CSo7NSCoder", "deinit"]
+- !private ["PSo8NSCoding", "CGRect"]
+- !private ["PSo8NSCoding", "CLLocationCoordinate2D"]
+- !private ["PSo8NSCoding", "GMSCameraPosition"]
+- !private ["PSo8NSCoding", "GMSMapView"]
+- !private ["PSo8NSCoding", "GMSMarker"]
+- ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "isMyLocationEnabled"]
+- ["PSo8NSCoding", "loadView"]
+- !private ["PSo8NSCoding", "map"]
+- !private ["PSo8NSCoding", "view"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "camera"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "map"]
+- !private ["PSo9NSCopying", "position"]
+- !private ["PSo9NSCopying", "snippet"]
+- !private ["PSo9NSCopying", "title"]
+- !private ["PSo26NSExtensionRequestHandling", "CGRect"]
+- !private ["PSo26NSExtensionRequestHandling", "CLLocationCoordinate2D"]
+- !private ["PSo26NSExtensionRequestHandling", "GMSCameraPosition"]
+- !private ["PSo26NSExtensionRequestHandling", "GMSMapView"]
+- !private ["PSo26NSExtensionRequestHandling", "GMSMarker"]
+- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- ["PSo26NSExtensionRequestHandling", "loadView"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "camera"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "CGRect"]
+- !private ["CSo8NSObject", "CLLocationCoordinate2D"]
+- !private ["CSo8NSObject", "GMSCameraPosition"]
+- !private ["CSo8NSObject", "GMSMapView"]
+- !private ["CSo8NSObject", "GMSMarker"]
+- !private ["CSo8NSObject", "camera"]
+- ["CSo8NSObject", "didReceiveMemoryWarning"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isMyLocationEnabled"]
+- ["CSo8NSObject", "loadView"]
+- !private ["CSo8NSObject", "map"]
+- !private ["CSo8NSObject", "position"]
+- !private ["CSo8NSObject", "snippet"]
+- !private ["CSo8NSObject", "title"]
+- !private ["CSo8NSObject", "view"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "CGRect"]
+- !private ["PSo16NSObjectProtocol", "CLLocationCoordinate2D"]
+- !private ["PSo16NSObjectProtocol", "GMSCameraPosition"]
+- !private ["PSo16NSObjectProtocol", "GMSMapView"]
+- !private ["PSo16NSObjectProtocol", "GMSMarker"]
+- !private ["PSo16NSObjectProtocol", "camera"]
+- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isMyLocationEnabled"]
+- ["PSo16NSObjectProtocol", "loadView"]
+- !private ["PSo16NSObjectProtocol", "map"]
+- !private ["PSo16NSObjectProtocol", "position"]
+- !private ["PSo16NSObjectProtocol", "snippet"]
+- !private ["PSo16NSObjectProtocol", "title"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- ["Sq", "deinit"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["C9SpotCheck6Tester", "CGRect"]
+- !private ["C9SpotCheck6Tester", "CLLocationCoordinate2D"]
+- !private ["C9SpotCheck6Tester", "GMSCameraPosition"]
+- !private ["C9SpotCheck6Tester", "GMSMapView"]
+- !private ["C9SpotCheck6Tester", "GMSMarker"]
+- ["C9SpotCheck6Tester", "deinit"]
+- ["C9SpotCheck6Tester", "didReceiveMemoryWarning"]
+- ["C9SpotCheck6Tester", "init"]
+- ["C9SpotCheck6Tester", "loadView"]
+- !private ["C9SpotCheck6Tester", "view"]
+- ["C9SpotCheck6Tester", "viewDidLoad"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "isMyLocationEnabled"]
+- !private ["PSo29UIAccessibilityIdentification", "map"]
+- !private ["PSo12UIAppearance", "isMyLocationEnabled"]
+- !private ["PSo12UIAppearance", "map"]
+- !private ["PSo21UIAppearanceContainer", "CGRect"]
+- !private ["PSo21UIAppearanceContainer", "CLLocationCoordinate2D"]
+- !private ["PSo21UIAppearanceContainer", "GMSCameraPosition"]
+- !private ["PSo21UIAppearanceContainer", "GMSMapView"]
+- !private ["PSo21UIAppearanceContainer", "GMSMarker"]
+- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "isMyLocationEnabled"]
+- ["PSo21UIAppearanceContainer", "loadView"]
+- !private ["PSo21UIAppearanceContainer", "map"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "CGRect"]
+- !private ["PSo18UIContentContainer", "CLLocationCoordinate2D"]
+- !private ["PSo18UIContentContainer", "GMSCameraPosition"]
+- !private ["PSo18UIContentContainer", "GMSMapView"]
+- !private ["PSo18UIContentContainer", "GMSMarker"]
+- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- !private ["PSo18UIContentContainer", "init"]
+- ["PSo18UIContentContainer", "loadView"]
+- !private ["PSo18UIContentContainer", "view"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "isMyLocationEnabled"]
+- !private ["PSo17UICoordinateSpace", "map"]
+- !private ["PSo13UIDynamicItem", "isMyLocationEnabled"]
+- !private ["PSo13UIDynamicItem", "map"]
+- !private ["PSo18UIFocusEnvironment", "CGRect"]
+- !private ["PSo18UIFocusEnvironment", "CLLocationCoordinate2D"]
+- !private ["PSo18UIFocusEnvironment", "GMSCameraPosition"]
+- !private ["PSo18UIFocusEnvironment", "GMSMapView"]
+- !private ["PSo18UIFocusEnvironment", "GMSMarker"]
+- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "isMyLocationEnabled"]
+- ["PSo18UIFocusEnvironment", "loadView"]
+- !private ["PSo18UIFocusEnvironment", "map"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "isMyLocationEnabled"]
+- !private ["PSo11UIFocusItem", "map"]
+- !private ["CSo11UIResponder", "CGRect"]
+- !private ["CSo11UIResponder", "CLLocationCoordinate2D"]
+- !private ["CSo11UIResponder", "GMSCameraPosition"]
+- !private ["CSo11UIResponder", "GMSMapView"]
+- !private ["CSo11UIResponder", "GMSMarker"]
+- ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "isMyLocationEnabled"]
+- ["CSo11UIResponder", "loadView"]
+- !private ["CSo11UIResponder", "map"]
+- !private ["CSo11UIResponder", "view"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "CGRect"]
+- !private ["PSo30UIResponderStandardEditActions", "CLLocationCoordinate2D"]
+- !private ["PSo30UIResponderStandardEditActions", "GMSCameraPosition"]
+- !private ["PSo30UIResponderStandardEditActions", "GMSMapView"]
+- !private ["PSo30UIResponderStandardEditActions", "GMSMarker"]
+- ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "isMyLocationEnabled"]
+- ["PSo30UIResponderStandardEditActions", "loadView"]
+- !private ["PSo30UIResponderStandardEditActions", "map"]
+- !private ["PSo30UIResponderStandardEditActions", "view"]
+- ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "CGRect"]
+- !private ["PSo16UIStateRestoring", "CLLocationCoordinate2D"]
+- !private ["PSo16UIStateRestoring", "GMSCameraPosition"]
+- !private ["PSo16UIStateRestoring", "GMSMapView"]
+- !private ["PSo16UIStateRestoring", "GMSMarker"]
+- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- !private ["PSo16UIStateRestoring", "init"]
+- ["PSo16UIStateRestoring", "loadView"]
+- !private ["PSo16UIStateRestoring", "view"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "CGRect"]
+- !private ["PSo18UITraitEnvironment", "CLLocationCoordinate2D"]
+- !private ["PSo18UITraitEnvironment", "GMSCameraPosition"]
+- !private ["PSo18UITraitEnvironment", "GMSMapView"]
+- !private ["PSo18UITraitEnvironment", "GMSMarker"]
+- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "isMyLocationEnabled"]
+- ["PSo18UITraitEnvironment", "loadView"]
+- !private ["PSo18UITraitEnvironment", "map"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "isMyLocationEnabled"]
+- !private ["CSo6UIView", "map"]
+- !private ["CSo16UIViewController", "CGRect"]
+- !private ["CSo16UIViewController", "CLLocationCoordinate2D"]
+- !private ["CSo16UIViewController", "GMSCameraPosition"]
+- !private ["CSo16UIViewController", "GMSMapView"]
+- !private ["CSo16UIViewController", "GMSMarker"]
+- ["CSo16UIViewController", "deinit"]
+- ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "loadView"]
+- !private ["CSo16UIViewController", "view"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isMyLocationEnabled"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "map"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "CGRect"]
+- !private ["Ps9_Hashable", "CLLocationCoordinate2D"]
+- !private ["Ps9_Hashable", "GMSCameraPosition"]
+- !private ["Ps9_Hashable", "GMSMapView"]
+- !private ["Ps9_Hashable", "GMSMarker"]
+- !private ["Ps9_Hashable", "camera"]
+- ["Ps9_Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "isMyLocationEnabled"]
+- ["Ps9_Hashable", "loadView"]
+- !private ["Ps9_Hashable", "map"]
+- !private ["Ps9_Hashable", "position"]
+- !private ["Ps9_Hashable", "snippet"]
+- !private ["Ps9_Hashable", "title"]
+- !private ["Ps9_Hashable", "view"]
+- ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "zero"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Sb"
+- !private "PSo15CALayerDelegate"
+- "VSC6CGRect"
+- "VSC22CLLocationCoordinate2D"
+- "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Sd"
+- "Ps9Equatable"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Sf"
+- "CSo17GMSCameraPosition"
+- "CSo10GMSMapView"
+- "CSo9GMSMarker"
+- !private "CSo10GMSOverlay"
+- "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- "CSo7NSCoder"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "Sq"
+- "SS"
+- "C9SpotCheck6Tester"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMapsBase/GMSCoordinateBounds.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMapsBase/GMSCompatabilityMacros.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/GoogleMaps/Subspecs/Base/Frameworks/GoogleMapsBase.framework/Headers/GoogleMapsBase.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/GoogleMaps/Subspecs/Base/Frameworks/GoogleMapsBase.framework/Modules/module.modulemap"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSURLTileLayer.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSTileLayer.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSSyncTileLayer.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSServices.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPolyline.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPolygon.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaView.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaService.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaLink.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaLayer.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaCameraUpdate.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanoramaCamera.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPanorama.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSOrientation.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMutablePath.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMarkerLayer.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMarker.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSUISettings.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMapView.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMapView+Animation.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMapStyle.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSMapLayer.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSIndoorLevel.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSIndoorDisplay.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSIndoorBuilding.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSGroundOverlay.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSPath.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSGeometryUtils.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSGeocoder.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSProjection.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCoordinateBounds+GoogleMaps.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSOverlay.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCircle.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCameraUpdate.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCameraPosition.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSCALayer.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSDeprecationMacros.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/Headers/Public/GoogleMaps/GoogleMaps/GMSAddress.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/GoogleMaps/Subspecs/Maps/Frameworks/GoogleMaps.framework/Headers/GoogleMaps.h"
+- "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/GoogleMaps/Subspecs/Maps/Frameworks/GoogleMaps.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+interface-hash: "13a6e0eae444e2c93fe570c098eafa00"

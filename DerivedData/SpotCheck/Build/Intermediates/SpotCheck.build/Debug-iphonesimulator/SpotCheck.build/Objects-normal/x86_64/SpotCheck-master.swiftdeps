@@ -1,0 +1,9 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.58.6 clang-800.0.42.1)"
+options: "b1983d475b92fc0114b030c2b1550b35"
+build_time: [531797277, 746519000]
+inputs:
+  "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/SpotCheck/ViewController.swift": [531797272, 0]
+  "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/SpotCheck/AppDelegate.swift": [531795141, 0]
+  "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/SpotCheck/Location.swift": [531793785, 0]
+  "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/SpotCheck/SampleData.swift": [531793785, 0]
+  "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/SpotCheck/SuggestionsViewController.swift": [531793785, 0]

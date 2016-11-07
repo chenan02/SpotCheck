@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D710CF39E361C399646DBA8 /* libPods-SpotCheck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE15875AF045CF72D15C0B5 /* libPods-SpotCheck.a */; };
+		292342421DD0062600F69CD4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 292342411DD0062600F69CD4 /* Podfile */; };
 		499E4FE71DB05FB800E18E43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E4FE61DB05FB800E18E43 /* AppDelegate.swift */; };
 		499E4FE91DB05FB800E18E43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E4FE81DB05FB800E18E43 /* ViewController.swift */; };
 		499E4FEC1DB05FB800E18E43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499E4FEA1DB05FB800E18E43 /* Main.storyboard */; };
@@ -29,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2923423E1DD004F100F69CD4 /* Oxygen-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxygen-Bold.ttf"; sourceTree = "<group>"; };
+		2923423F1DD004F900F69CD4 /* Oxygen-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxygen-Light.ttf"; sourceTree = "<group>"; };
+		292342401DD004FE00F69CD4 /* Oxygen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxygen-Regular.ttf"; sourceTree = "<group>"; };
+		292342411DD0062600F69CD4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		499E4FE31DB05FB800E18E43 /* SpotCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499E4FE61DB05FB800E18E43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		499E4FE81DB05FB800E18E43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +45,8 @@
 		499E4FFA1DB072DB00E18E43 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsViewController.swift; sourceTree = "<group>"; };
 		499E4FFC1DB0744E00E18E43 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		499E4FFE1DB074E700E18E43 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		6AE15875AF045CF72D15C0B5 /* libPods-SpotCheck.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpotCheck.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AD63D02C0189CF2F2034002 /* Pods-SpotCheck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotCheck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpotCheck/Pods-SpotCheck.debug.xcconfig"; sourceTree = "<group>"; };
 		A50755871DC7FBEB0004E805 /* Oxygen-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Oxygen-Bold.ttf"; path = "../../../../Downloads/Oxygen/Oxygen-Bold.ttf"; sourceTree = "<group>"; };
 		A50755881DC7FBEB0004E805 /* Oxygen-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Oxygen-Light.ttf"; path = "../../../../Downloads/Oxygen/Oxygen-Light.ttf"; sourceTree = "<group>"; };
 		A50755891DC7FBEB0004E805 /* Oxygen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Oxygen-Regular.ttf"; path = "../../../../Downloads/Oxygen/Oxygen-Regular.ttf"; sourceTree = "<group>"; };
@@ -50,6 +58,7 @@
 		A5DAAF771DC06FD9005A6C5F /* Facebook_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Facebook_Logo.png; path = ../../../../Documents/workspace/iOS_dev/test4234/test4234/Images/Facebook_Logo.png; sourceTree = "<group>"; };
 		A5DAAF781DC06FD9005A6C5F /* Twitter_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Twitter_Logo.png; path = ../../../../Documents/workspace/iOS_dev/test4234/test4234/Images/Twitter_Logo.png; sourceTree = "<group>"; };
 		A5DAAF791DC06FD9005A6C5F /* Front_Page_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Front_Page_Logo.png; path = ../../../../Documents/workspace/iOS_dev/test4234/test4234/Images/Front_Page_Logo.png; sourceTree = "<group>"; };
+		CEDD89E5CC5720DB313D1FAF /* Pods-SpotCheck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotCheck.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpotCheck/Pods-SpotCheck.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D710CF39E361C399646DBA8 /* libPods-SpotCheck.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,8 +76,11 @@
 		499E4FDA1DB05FB800E18E43 = {
 			isa = PBXGroup;
 			children = (
+				292342411DD0062600F69CD4 /* Podfile */,
 				499E4FE51DB05FB800E18E43 /* SpotCheck */,
 				499E4FE41DB05FB800E18E43 /* Products */,
+				DFB5F2F91D9358A0BE233A83 /* Pods */,
+				89BBD882C2D29F54A3367C80 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,10 +110,21 @@
 			path = SpotCheck;
 			sourceTree = "<group>";
 		};
+		89BBD882C2D29F54A3367C80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AE15875AF045CF72D15C0B5 /* libPods-SpotCheck.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A50755861DC7FABC0004E805 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				A50755871DC7FBEB0004E805 /* Oxygen-Bold.ttf */,
+				2923423E1DD004F100F69CD4 /* Oxygen-Bold.ttf */,
+				2923423F1DD004F900F69CD4 /* Oxygen-Light.ttf */,
+				292342401DD004FE00F69CD4 /* Oxygen-Regular.ttf */,
 				A50755881DC7FBEB0004E805 /* Oxygen-Light.ttf */,
 				A50755891DC7FBEB0004E805 /* Oxygen-Regular.ttf */,
 			);
@@ -122,6 +146,15 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		DFB5F2F91D9358A0BE233A83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AD63D02C0189CF2F2034002 /* Pods-SpotCheck.debug.xcconfig */,
+				CEDD89E5CC5720DB313D1FAF /* Pods-SpotCheck.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 499E4FF51DB05FB900E18E43 /* Build configuration list for PBXNativeTarget "SpotCheck" */;
 			buildPhases = (
+				BE7BFD055D19429F77EB97F3 /* [CP] Check Pods Manifest.lock */,
 				499E4FDF1DB05FB800E18E43 /* Sources */,
 				499E4FE01DB05FB800E18E43 /* Frameworks */,
 				499E4FE11DB05FB800E18E43 /* Resources */,
+				F61C9CA196E6374729841640 /* [CP] Embed Pods Frameworks */,
+				4F7020CD22375BD5DB643E32 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,7 +185,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Spot Check";
 				TargetAttributes = {
 					499E4FE21DB05FB800E18E43 = {
@@ -181,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				292342421DD0062600F69CD4 /* Podfile in Resources */,
 				A5DAAF741DC06FCF005A6C5F /* App_Logo.png in Resources */,
 				499E4FF11DB05FB900E18E43 /* LaunchScreen.storyboard in Resources */,
 				A5DAAF7A1DC06FD9005A6C5F /* Map_Logo.png in Resources */,
@@ -199,6 +236,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F7020CD22375BD5DB643E32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpotCheck/Pods-SpotCheck-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE7BFD055D19429F77EB97F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F61C9CA196E6374729841640 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpotCheck/Pods-SpotCheck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		499E4FDF1DB05FB800E18E43 /* Sources */ = {
@@ -253,6 +338,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -302,6 +388,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -328,6 +415,7 @@
 		};
 		499E4FF61DB05FB900E18E43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AD63D02C0189CF2F2034002 /* Pods-SpotCheck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SpotCheck/Info.plist;
@@ -340,6 +428,7 @@
 		};
 		499E4FF71DB05FB900E18E43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEDD89E5CC5720DB313D1FAF /* Pods-SpotCheck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SpotCheck/Info.plist;
