@@ -78,7 +78,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ifG-cy-CIB" id="TWh-B2-fpq">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KXO-EU-Oo8">
@@ -111,7 +111,7 @@
         <!--Home-->
         <scene sceneID="I7g-sK-sKx">
             <objects>
-                <viewController id="7ow-fI-Zzc" sceneMemberID="viewController">
+                <viewController id="7ow-fI-Zzc" customClass="FrontPage" customModule="SpotCheck" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kbm-NX-v34"/>
                         <viewControllerLayoutGuide type="bottom" id="uJH-YK-WDR"/>
@@ -159,6 +159,9 @@
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="searchMap:" destination="7ow-fI-Zzc" eventType="touchUpInside" id="xSt-D6-o0n"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRS-du-GTj">
                                 <rect key="frame" x="111" y="401" width="152" height="44"/>
@@ -285,7 +288,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DNo-Bi-1Rq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="VbW-Ud-gBJ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lqj-ex-QPD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lqj-ex-QPD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -319,6 +322,10 @@
         <scene sceneID="xRr-mT-ceU">
             <objects>
                 <viewController id="kFF-O3-Tdp" customClass="MapController" customModule="SpotCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DXP-iT-uuY"/>
+                        <viewControllerLayoutGuide type="bottom" id="r0Y-kx-DRR"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4Fa-8o-IQL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -333,6 +340,10 @@
         <scene sceneID="KJf-IW-t8G">
             <objects>
                 <viewController id="iZE-Uv-OWr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9I5-a6-Dgl"/>
+                        <viewControllerLayoutGuide type="bottom" id="yes-Hb-GH0"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Sw1-LY-iSS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -348,7 +359,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L7l-PX-nG3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="Map_Logo.png" selectedImage="Map_Logo_Filled.png" id="LkI-Gh-Y0c"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="v4M-di-9kd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v4M-di-9kd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

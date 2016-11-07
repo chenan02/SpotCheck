@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D710CF39E361C399646DBA8 /* libPods-SpotCheck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE15875AF045CF72D15C0B5 /* libPods-SpotCheck.a */; };
 		292342421DD0062600F69CD4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 292342411DD0062600F69CD4 /* Podfile */; };
+		299852001DD0348500C1578D /* FrontPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299851FF1DD0348500C1578D /* FrontPage.swift */; };
 		499E4FE71DB05FB800E18E43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E4FE61DB05FB800E18E43 /* AppDelegate.swift */; };
 		499E4FE91DB05FB800E18E43 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E4FE81DB05FB800E18E43 /* MapController.swift */; };
 		499E4FEC1DB05FB800E18E43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499E4FEA1DB05FB800E18E43 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		2923423F1DD004F900F69CD4 /* Oxygen-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxygen-Light.ttf"; sourceTree = "<group>"; };
 		292342401DD004FE00F69CD4 /* Oxygen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxygen-Regular.ttf"; sourceTree = "<group>"; };
 		292342411DD0062600F69CD4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		299851FF1DD0348500C1578D /* FrontPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontPage.swift; sourceTree = "<group>"; };
 		499E4FE31DB05FB800E18E43 /* SpotCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499E4FE61DB05FB800E18E43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		499E4FE81DB05FB800E18E43 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				499E4FE61DB05FB800E18E43 /* AppDelegate.swift */,
 				A5DAAF721DC06F25005A6C5F /* Images */,
 				499E4FE81DB05FB800E18E43 /* MapController.swift */,
+				299851FF1DD0348500C1578D /* FrontPage.swift */,
 				499E4FEA1DB05FB800E18E43 /* Main.storyboard */,
 				499E4FFC1DB0744E00E18E43 /* Location.swift */,
 				499E4FFA1DB072DB00E18E43 /* SuggestionsViewController.swift */,
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				299852001DD0348500C1578D /* FrontPage.swift in Sources */,
 				499E4FE91DB05FB800E18E43 /* MapController.swift in Sources */,
 				499E4FE71DB05FB800E18E43 /* AppDelegate.swift in Sources */,
 				499E4FFD1DB0744E00E18E43 /* Location.swift in Sources */,
