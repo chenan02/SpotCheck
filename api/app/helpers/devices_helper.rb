@@ -1,2 +1,2 @@
-module DeviceHelper
+module DevicesHelper
 end

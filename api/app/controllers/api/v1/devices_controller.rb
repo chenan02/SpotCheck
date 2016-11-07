@@ -1,4 +1,4 @@
-class DeviceController < ApplicationController
+class DevicesController < ApplicationController
     def index
         deviceid = params[:deviceid]
         device = Device.find_by(deviceid: deviceid)

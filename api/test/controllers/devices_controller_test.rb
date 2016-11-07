@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class DeviceControllerTest < ActionDispatch::IntegrationTest
+class DevicesControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
