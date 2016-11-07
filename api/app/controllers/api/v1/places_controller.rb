@@ -29,8 +29,9 @@ class Api::V1::PlacesController < ApplicationController
         )
         if @place.save
             # flash success
-            #return
+            return render json: { status: "ok", message: ":)" }
         end
+        render json: { status: "error", message: ":(" }
         # flash warning
         # return
     end
@@ -41,9 +42,11 @@ class Api::V1::PlacesController < ApplicationController
         average = (params[:occupancy] + @place.occupancy)/2
         if @place.update(occupancy: average)
             # redirect
-        else
-            # redirect to edit
+            return render json: { status: "ok", message: ":)" }
         end
+        render json: { status: "error", message: ":(" }
+            # redirect to edit
+        
     end
 
     def destroy
