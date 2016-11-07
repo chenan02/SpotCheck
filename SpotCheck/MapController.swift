@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MapController.swift
 //  SpotCheck
 //
 //  Created by Andrew Chen on 10/13/16.
