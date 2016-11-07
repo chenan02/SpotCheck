@@ -10,9 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161028003222) do
+ActiveRecord::Schema.define(version: 20161107004624) do
+
+  create_table "devices", force: :cascade do |t|
+    t.string   "deviceid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.string   "placeid"
+    t.string   "deviceid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "places", force: :cascade do |t|
+    t.string   "placeid"
     t.string   "name"
     t.float    "occupancy"
     t.string   "address"
