@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		trsZDdgWMiunDY3DmLJPTMyI5JM=
+		q9WJgROBeE3p8aEgsfj0xe05b2k=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -24,17 +24,25 @@
 		<data>
 		KwgUBntReC6gMjV0U0xrQQWntX4=
 		</data>
-		<key>Base.lproj/Main.storyboardc/HZ8-zb-l3U-view-TSL-uc-mHg.nib</key>
+		<key>Base.lproj/Main.storyboardc/4S1-pu-ZQT-view-1IK-gu-Jyt.nib</key>
 		<data>
-		OL+ECswJYyqptRLm5CJ3CdbiJiU=
+		whay0oENRm+NNi8rhOAvlAlvLdI=
+		</data>
+		<key>Base.lproj/Main.storyboardc/7ow-fI-Zzc-view-DjA-Wn-XMd.nib</key>
+		<data>
+		KC7Vp+LTOayGClc5YuBHRKv7WnM=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		ic1jTjXVLvha6+vesW56a6lMvQU=
+		eA2WaeppPtPkFQPjO7tsn83sSx0=
 		</data>
-		<key>Base.lproj/Main.storyboardc/UIViewController-HZ8-zb-l3U.nib</key>
+		<key>Base.lproj/Main.storyboardc/UITabBarController-arq-hM-0IJ.nib</key>
 		<data>
-		tsClHJKDBp9GtFIG0cdgINWbsZs=
+		EBfuONVb/J+Ui+oGBhekEPh64n8=
+		</data>
+		<key>Base.lproj/Main.storyboardc/lEd-mN-Fat-view-LyI-Mb-cCz.nib</key>
+		<data>
+		rUjufSsI8go9W1GPqFDqDPb3Wz0=
 		</data>
 		<key>Facebook_Logo.png</key>
 		<data>
@@ -1211,7 +1219,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		oHftvi7i33PIxQdqCD3lNXiOvzE=
+		B+tOTt5YSVpZAQt/NX73ZTHKxsA=
 		</data>
 		<key>Map_Logo.png</key>
 		<data>
@@ -1267,11 +1275,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			trsZDdgWMiunDY3DmLJPTMyI5JM=
+			q9WJgROBeE3p8aEgsfj0xe05b2k=
 			</data>
 			<key>hash2</key>
 			<data>
-			czIivoswWAkPbzXlUeu6R0EErv/SZc5Tr4FAflGawWA=
+			acvekVllmNVL5LC1kGUdkw0Q4jain5YsMcQ2YVRvRrk=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -1307,37 +1315,59 @@
 			aNdSN9awZ1OaeRtr0t94v/PB/+k5TmAV6fo6+69OL98=
 			</data>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/HZ8-zb-l3U-view-TSL-uc-mHg.nib</key>
+		<key>Base.lproj/Main.storyboardc/4S1-pu-ZQT-view-1IK-gu-Jyt.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OL+ECswJYyqptRLm5CJ3CdbiJiU=
+			whay0oENRm+NNi8rhOAvlAlvLdI=
 			</data>
 			<key>hash2</key>
 			<data>
-			7p8f/deTjXfXVmZohCr6kzC+x3X/iQRpbI8GYMPErZA=
+			fJo3xzHrljAqfpkZ7gj+Nj0NchaBRgog2M8G9JtXLko=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/7ow-fI-Zzc-view-DjA-Wn-XMd.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KC7Vp+LTOayGClc5YuBHRKv7WnM=
+			</data>
+			<key>hash2</key>
+			<data>
+			NOm4qkr+DoW8HNiklUrIpX5Sk6UEFKdlgnBpIxY4Aok=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ic1jTjXVLvha6+vesW56a6lMvQU=
+			eA2WaeppPtPkFQPjO7tsn83sSx0=
 			</data>
 			<key>hash2</key>
 			<data>
-			D53dAs76745b5n6cGARISc+ayuTAauppsm7N5kiwx8E=
+			2XetPQL/qH4xtPKPIGwECE1Fci7KlUMzkVRTMXC0hrg=
 			</data>
 		</dict>
-		<key>Base.lproj/Main.storyboardc/UIViewController-HZ8-zb-l3U.nib</key>
+		<key>Base.lproj/Main.storyboardc/UITabBarController-arq-hM-0IJ.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tsClHJKDBp9GtFIG0cdgINWbsZs=
+			EBfuONVb/J+Ui+oGBhekEPh64n8=
 			</data>
 			<key>hash2</key>
 			<data>
-			ECAlu8I0dmunDxsecXB8XSOauRuEME0lZVBWXFTCqvc=
+			WcLi7Bq3301vslXUBEJ42feNZOZ28IvV3fM2qcmhGgE=
+			</data>
+		</dict>
+		<key>Base.lproj/Main.storyboardc/lEd-mN-Fat-view-LyI-Mb-cCz.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rUjufSsI8go9W1GPqFDqDPb3Wz0=
+			</data>
+			<key>hash2</key>
+			<data>
+			rd1BZz4JGQvPzdt/k7d0Bu/INFzGFYfeU2zwjtQZdbU=
 			</data>
 		</dict>
 		<key>Facebook_Logo.png</key>

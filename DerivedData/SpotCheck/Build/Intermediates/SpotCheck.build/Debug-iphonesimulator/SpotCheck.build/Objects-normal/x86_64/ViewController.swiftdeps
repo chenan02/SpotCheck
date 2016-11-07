@@ -1,25 +1,25 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "Tester"
+- "ViewController"
 provides-nominal:
-- "C9SpotCheck6Tester"
+- "C9SpotCheck14ViewController"
 provides-member:
-- ["C9SpotCheck6Tester", ""]
+- ["C9SpotCheck14ViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
 - "didReceiveMemoryWarning"
+- "viewDidLoad"
 - "loadView"
 depends-top-level:
-- !private "GMSCameraPosition"
-- !private "CLLocationCoordinate2D"
-- !private "StringLiteralType"
-- "UIViewController"
+- "ViewController"
 - !private "GMSMapView"
-- !private "BooleanLiteralType"
-- "Tester"
-- !private "CGRect"
 - "AssignmentPrecedence"
+- !private "CLLocationCoordinate2D"
+- !private "GMSCameraPosition"
+- !private "BooleanLiteralType"
 - !private "GMSMarker"
+- "UIViewController"
+- !private "StringLiteralType"
+- !private "CGRect"
 depends-member:
 - !private ["Ps9AnyObject", "CGRect"]
 - !private ["Ps9AnyObject", "CLLocationCoordinate2D"]
@@ -232,17 +232,6 @@ depends-member:
 - ["Sq", "deinit"]
 - ["SS", "deinit"]
 - !private ["SS", "init"]
-- !private ["C9SpotCheck6Tester", "CGRect"]
-- !private ["C9SpotCheck6Tester", "CLLocationCoordinate2D"]
-- !private ["C9SpotCheck6Tester", "GMSCameraPosition"]
-- !private ["C9SpotCheck6Tester", "GMSMapView"]
-- !private ["C9SpotCheck6Tester", "GMSMarker"]
-- ["C9SpotCheck6Tester", "deinit"]
-- ["C9SpotCheck6Tester", "didReceiveMemoryWarning"]
-- ["C9SpotCheck6Tester", "init"]
-- ["C9SpotCheck6Tester", "loadView"]
-- !private ["C9SpotCheck6Tester", "view"]
-- ["C9SpotCheck6Tester", "viewDidLoad"]
 - !private ["Ps16TextOutputStream", "init"]
 - !private ["Ps20TextOutputStreamable", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "isMyLocationEnabled"]
@@ -355,6 +344,17 @@ depends-member:
 - !private ["CSo16UIViewController", "view"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
+- !private ["C9SpotCheck14ViewController", "CGRect"]
+- !private ["C9SpotCheck14ViewController", "CLLocationCoordinate2D"]
+- !private ["C9SpotCheck14ViewController", "GMSCameraPosition"]
+- !private ["C9SpotCheck14ViewController", "GMSMapView"]
+- !private ["C9SpotCheck14ViewController", "GMSMarker"]
+- ["C9SpotCheck14ViewController", "deinit"]
+- ["C9SpotCheck14ViewController", "didReceiveMemoryWarning"]
+- ["C9SpotCheck14ViewController", "init"]
+- ["C9SpotCheck14ViewController", "loadView"]
+- !private ["C9SpotCheck14ViewController", "view"]
+- ["C9SpotCheck14ViewController", "viewDidLoad"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isMyLocationEnabled"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "map"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
@@ -418,7 +418,6 @@ depends-nominal:
 - !private "CSo8NSString"
 - "Sq"
 - "SS"
-- "C9SpotCheck6Tester"
 - !private "Ps16TextOutputStream"
 - !private "Ps20TextOutputStreamable"
 - !private "PSo29UIAccessibilityIdentification"
@@ -435,6 +434,7 @@ depends-nominal:
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
+- "C9SpotCheck14ViewController"
 - !private "Ps37_DefaultCustomPlaygroundQuickLookable"
 - !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
 - !private "Ps34_ExpressibleByBuiltinStringLiteral"
@@ -500,4 +500,4 @@ depends-external:
 - "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/GoogleMaps/Subspecs/Maps/Frameworks/GoogleMaps.framework/Headers/GoogleMaps.h"
 - "/Users/chrisraveendra/Desktop/EECS441/SpotCheck/Pods/GoogleMaps/Subspecs/Maps/Frameworks/GoogleMaps.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
-interface-hash: "13a6e0eae444e2c93fe570c098eafa00"
+interface-hash: "df3f5137b65bf3a343cbbb4c67899641"

@@ -10,7 +10,7 @@
 		1D710CF39E361C399646DBA8 /* libPods-SpotCheck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE15875AF045CF72D15C0B5 /* libPods-SpotCheck.a */; };
 		292342421DD0062600F69CD4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 292342411DD0062600F69CD4 /* Podfile */; };
 		499E4FE71DB05FB800E18E43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E4FE61DB05FB800E18E43 /* AppDelegate.swift */; };
-		499E4FE91DB05FB800E18E43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E4FE81DB05FB800E18E43 /* ViewController.swift */; };
+		499E4FE91DB05FB800E18E43 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E4FE81DB05FB800E18E43 /* MapController.swift */; };
 		499E4FEC1DB05FB800E18E43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499E4FEA1DB05FB800E18E43 /* Main.storyboard */; };
 		499E4FEE1DB05FB800E18E43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499E4FED1DB05FB800E18E43 /* Assets.xcassets */; };
 		499E4FF11DB05FB900E18E43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499E4FEF1DB05FB900E18E43 /* LaunchScreen.storyboard */; };
@@ -37,7 +37,7 @@
 		292342411DD0062600F69CD4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		499E4FE31DB05FB800E18E43 /* SpotCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499E4FE61DB05FB800E18E43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		499E4FE81DB05FB800E18E43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		499E4FE81DB05FB800E18E43 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		499E4FEB1DB05FB800E18E43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		499E4FED1DB05FB800E18E43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		499E4FF01DB05FB900E18E43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 				A50755861DC7FABC0004E805 /* Fonts */,
 				499E4FE61DB05FB800E18E43 /* AppDelegate.swift */,
 				A5DAAF721DC06F25005A6C5F /* Images */,
-				499E4FE81DB05FB800E18E43 /* ViewController.swift */,
+				499E4FE81DB05FB800E18E43 /* MapController.swift */,
 				499E4FEA1DB05FB800E18E43 /* Main.storyboard */,
 				499E4FFC1DB0744E00E18E43 /* Location.swift */,
 				499E4FFA1DB072DB00E18E43 /* SuggestionsViewController.swift */,
@@ -265,7 +265,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F61C9CA196E6374729841640 /* [CP] Embed Pods Frameworks */ = {
@@ -290,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				499E4FE91DB05FB800E18E43 /* ViewController.swift in Sources */,
+				499E4FE91DB05FB800E18E43 /* MapController.swift in Sources */,
 				499E4FE71DB05FB800E18E43 /* AppDelegate.swift in Sources */,
 				499E4FFD1DB0744E00E18E43 /* Location.swift in Sources */,
 				499E4FFF1DB074E700E18E43 /* SampleData.swift in Sources */,
