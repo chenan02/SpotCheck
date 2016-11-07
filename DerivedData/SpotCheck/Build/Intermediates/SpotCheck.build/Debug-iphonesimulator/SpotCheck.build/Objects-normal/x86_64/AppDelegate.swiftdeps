@@ -6,27 +6,27 @@ provides-nominal:
 provides-member:
 - ["C9SpotCheck11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillEnterForeground"
+- "applicationWillResignActive"
+- "applicationDidBecomeActive"
 - "applicationWillTerminate"
+- "window"
+- "applicationWillEnterForeground"
 - "applicationDidEnterBackground"
 - "application"
-- "applicationWillResignActive"
-- "window"
-- "applicationDidBecomeActive"
 depends-top-level:
-- !private "UIColor"
-- "UIResponder"
-- "UIApplicationLaunchOptionsKey"
-- !private "UITabBar"
-- "AssignmentPrecedence"
 - "AppDelegate"
-- "UIApplication"
 - !private "GMSServices"
 - !private "StringLiteralType"
-- "UIWindow"
+- !private "UIColor"
+- "UIResponder"
 - "Bool"
 - "UIApplicationDelegate"
+- "UIWindow"
 - !private "BooleanLiteralType"
+- "AssignmentPrecedence"
+- "UIApplicationLaunchOptionsKey"
+- "UIApplication"
+- !private "UITabBar"
 depends-member:
 - !private ["Ps9AnyObject", "GMSServices"]
 - !private ["Ps9AnyObject", "UIColor"]
