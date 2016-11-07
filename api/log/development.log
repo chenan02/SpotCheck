@@ -1331,3 +1331,86 @@ Processing by Api::V1::PlacesController#index as JSON
 Completed 200 OK in 482ms (Views: 11.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&type=restaurant" for ::1 at 2016-11-07 00:23:42 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "type"=>"restaurant"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (5.1ms)
+Completed 200 OK in 519ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=ugli" for ::1 at 2016-11-07 00:24:01 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"ugli"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (0.6ms)
+Completed 200 OK in 807ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=library" for ::1 at 2016-11-07 00:24:15 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"library"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (3.7ms)
+Completed 200 OK in 902ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 00:24:42 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (3.5ms)
+Completed 200 OK in 945ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=bar" for ::1 at 2016-11-07 00:24:52 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"bar"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (3.2ms)
+Completed 200 OK in 1054ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=ricks" for ::1 at 2016-11-07 00:25:07 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"ricks"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (2.3ms)
+Completed 200 OK in 744ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=ugli" for ::1 at 2016-11-07 00:25:39 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"ugli"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (0.7ms)
+Completed 200 OK in 619ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=charleys" for ::1 at 2016-11-07 00:25:49 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"charleys"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (0.8ms)
+Completed 200 OK in 647ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=library" for ::1 at 2016-11-07 00:39:55 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"library"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 1..2)):
+  
+app/controllers/api/v1/places_controller.rb:8:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.1ms)
