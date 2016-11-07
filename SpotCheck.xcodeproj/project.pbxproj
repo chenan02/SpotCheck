@@ -11,6 +11,7 @@
 		292342421DD0062600F69CD4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 292342411DD0062600F69CD4 /* Podfile */; };
 		299852001DD0348500C1578D /* FrontPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299851FF1DD0348500C1578D /* FrontPage.swift */; };
 		29D5CA761DD0453D002052F1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D5CA751DD0453D002052F1 /* CoreLocation.framework */; };
+		29D5CA781DD0E28D002052F1 /* Mod_Marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 29D5CA771DD0E28D002052F1 /* Mod_Marker.png */; };
 		499E4FE71DB05FB800E18E43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E4FE61DB05FB800E18E43 /* AppDelegate.swift */; };
 		499E4FE91DB05FB800E18E43 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E4FE81DB05FB800E18E43 /* MapController.swift */; };
 		499E4FEC1DB05FB800E18E43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499E4FEA1DB05FB800E18E43 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		292342411DD0062600F69CD4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		299851FF1DD0348500C1578D /* FrontPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontPage.swift; sourceTree = "<group>"; };
 		29D5CA751DD0453D002052F1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		29D5CA771DD0E28D002052F1 /* Mod_Marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mod_Marker.png; sourceTree = "<group>"; };
 		499E4FE31DB05FB800E18E43 /* SpotCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499E4FE61DB05FB800E18E43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		499E4FE81DB05FB800E18E43 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		A5DAAF721DC06F25005A6C5F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				29D5CA771DD0E28D002052F1 /* Mod_Marker.png */,
 				A541FAFC1DCE5DF10043009B /* Home_Logo_Unfilled.png */,
 				A541FAFE1DCE63120043009B /* Map_Logo_Filled.png */,
 				A5DAAF751DC06FD9005A6C5F /* Map_Logo.png */,
@@ -226,6 +229,7 @@
 			files = (
 				292342421DD0062600F69CD4 /* Podfile in Resources */,
 				A5DAAF741DC06FCF005A6C5F /* App_Logo.png in Resources */,
+				29D5CA781DD0E28D002052F1 /* Mod_Marker.png in Resources */,
 				499E4FF11DB05FB900E18E43 /* LaunchScreen.storyboard in Resources */,
 				A5DAAF7A1DC06FD9005A6C5F /* Map_Logo.png in Resources */,
 				A541FAFD1DCE5DF10043009B /* Home_Logo_Unfilled.png in Resources */,
