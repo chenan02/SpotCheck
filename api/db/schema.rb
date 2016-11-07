@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20161107004624) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "devices", force: :cascade do |t|
     t.string   "deviceid"
     t.datetime "created_at", null: false
@@ -19,10 +22,12 @@ ActiveRecord::Schema.define(version: 20161107004624) do
   end
 
   create_table "favorites", force: :cascade do |t|
-    t.string   "placeid"
-    t.string   "deviceid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "placeid_id"
+    t.integer  "deviceid_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["deviceid_id"], name: "index_favorites_on_deviceid_id", using: :btree
+    t.index ["placeid_id"], name: "index_favorites_on_placeid_id", using: :btree
   end
 
   create_table "places", force: :cascade do |t|
