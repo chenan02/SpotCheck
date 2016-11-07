@@ -10,6 +10,7 @@
 		1D710CF39E361C399646DBA8 /* libPods-SpotCheck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE15875AF045CF72D15C0B5 /* libPods-SpotCheck.a */; };
 		292342421DD0062600F69CD4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 292342411DD0062600F69CD4 /* Podfile */; };
 		299852001DD0348500C1578D /* FrontPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299851FF1DD0348500C1578D /* FrontPage.swift */; };
+		29D5CA761DD0453D002052F1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D5CA751DD0453D002052F1 /* CoreLocation.framework */; };
 		499E4FE71DB05FB800E18E43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E4FE61DB05FB800E18E43 /* AppDelegate.swift */; };
 		499E4FE91DB05FB800E18E43 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499E4FE81DB05FB800E18E43 /* MapController.swift */; };
 		499E4FEC1DB05FB800E18E43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499E4FEA1DB05FB800E18E43 /* Main.storyboard */; };
@@ -35,8 +36,9 @@
 		2923423E1DD004F100F69CD4 /* Oxygen-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxygen-Bold.ttf"; sourceTree = "<group>"; };
 		2923423F1DD004F900F69CD4 /* Oxygen-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxygen-Light.ttf"; sourceTree = "<group>"; };
 		292342401DD004FE00F69CD4 /* Oxygen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oxygen-Regular.ttf"; sourceTree = "<group>"; };
-		292342411DD0062600F69CD4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		292342411DD0062600F69CD4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		299851FF1DD0348500C1578D /* FrontPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontPage.swift; sourceTree = "<group>"; };
+		29D5CA751DD0453D002052F1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		499E4FE31DB05FB800E18E43 /* SpotCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499E4FE61DB05FB800E18E43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		499E4FE81DB05FB800E18E43 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D5CA761DD0453D002052F1 /* CoreLocation.framework in Frameworks */,
 				1D710CF39E361C399646DBA8 /* libPods-SpotCheck.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +119,7 @@
 		89BBD882C2D29F54A3367C80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				29D5CA751DD0453D002052F1 /* CoreLocation.framework */,
 				6AE15875AF045CF72D15C0B5 /* libPods-SpotCheck.a */,
 			);
 			name = Frameworks;
