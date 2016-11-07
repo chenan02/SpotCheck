@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B1084E77238C856FA2A224CD38AE0E8FEBDA47AB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B1084E77238C856FA2A224CD38AE0E8FEBDA47AB" : 9223372036854775807,
+    "7686657C22B4166C6CB8C40AAB814998D7D83ECB" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F8584334-04B1-4392-8EF0-85A455DBF0C8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B1084E77238C856FA2A224CD38AE0E8FEBDA47AB" : "SpotCheck\/",
+    "7686657C22B4166C6CB8C40AAB814998D7D83ECB" : "..\/..\/Documents\/workspace\/iOS_dev"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SpotCheck",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SpotCheck.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sgupta654\/iOS_Objective_C_Dev_Notes.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7686657C22B4166C6CB8C40AAB814998D7D83ECB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/chenan02\/SpotCheck.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B1084E77238C856FA2A224CD38AE0E8FEBDA47AB"
+    }
+  ]
+}
