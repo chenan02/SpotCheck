@@ -48,7 +48,7 @@ class MapController: UIViewController {
     override func loadView() {
         // Create a GMSCameraPosition that tells the map to display the
         // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 15.5)
+        /*let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 15.5)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
         view = mapView
@@ -58,7 +58,21 @@ class MapController: UIViewController {
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
         marker.title = "Sydney"
-        marker.snippet = "Australia"
+        marker.snippet = "Australia" */
+        
+        let camera = GMSCameraPosition.camera(withLatitude: 42.2727563, longitude: -83.73799029999999, zoom: 15.5)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView.isMyLocationEnabled = true
+        view = mapView
+        var intVal = 2
+        
+        // Creates a marker in the center of the map.
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: 42.2727563, longitude: -83.73799029999999)
+        marker.title = "Kresge Business Administration Library"
+        marker.snippet = "Other Nearby Libraries: \n Law Library (occupancy: 5.0) \n Hatcher Graduate Library (occupancy: 8.2) \n Shapiro Undergraduate Library (occupancy: 8.6)"
+        
+        
         marker.map = mapView
       //  marker.icon = GMSMarker.markerImage(with: UIColor.white)
         marker.icon = self.createImage(intVal)
