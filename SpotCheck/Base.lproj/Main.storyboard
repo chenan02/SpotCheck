@@ -78,7 +78,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ifG-cy-CIB" id="TWh-B2-fpq">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KXO-EU-Oo8">
@@ -188,7 +188,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you want to do?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ma7-nP-Ynv">
-                                <rect key="frame" x="69.5" y="208" width="236.5" height="40"/>
+                                <rect key="frame" x="69" y="208" width="237" height="40"/>
                                 <fontDescription key="fontDescription" name="Oxygen-Bold" family="Oxygen" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -288,7 +288,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DNo-Bi-1Rq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="VbW-Ud-gBJ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lqj-ex-QPD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lqj-ex-QPD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -352,6 +352,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49x-Hk-YSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-676" y="-712"/>
         </scene>
         <!--Map-->
         <scene sceneID="4UL-OT-aUg">
@@ -359,7 +360,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L7l-PX-nG3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="Map_Logo.png" selectedImage="Map_Logo_Filled.png" id="LkI-Gh-Y0c"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v4M-di-9kd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="v4M-di-9kd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
