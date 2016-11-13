@@ -1414,3 +1414,796 @@ app/controllers/api/v1/places_controller.rb:8:in `index'
   Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.1ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=pizza" for ::1 at 2016-11-07 00:54:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"pizza"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (5.8ms)
+Completed 200 OK in 867ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=pizza%20house" for ::1 at 2016-11-07 00:56:50 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"pizza house"}
+Completed 500 Internal Server Error in 677ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `body' for #<Array:0x007f8ad546fd90>):
+  
+app/controllers/api/v1/places_controller.rb:9:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.2ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=pizza%20house" for ::1 at 2016-11-07 00:57:05 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"pizza house"}
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `body' for #<GooglePlaces::Spot:0x007f8ad8141b20>):
+  
+app/controllers/api/v1/places_controller.rb:9:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.3ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.6ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&type=restaurant" for ::1 at 2016-11-07 01:23:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "type"=>"restaurant"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/api/v1/places_controller.rb:10:in `+'
+app/controllers/api/v1/places_controller.rb:10:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.0ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 01:23:35 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (2.4ms)
+Completed 500 Internal Server Error in 971ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+     9: #     #json.description place.description
+    10: # end
+    11: json.array!(@places) do |place|
+    12:     json.name place["result"]["name"]
+    13:     #json.occupancy place.occupancy
+    14:     json.place_id place["result"]["place_id"]
+    15:     json.lat place["result"]["geometry"]["location"]["lat"]
+  
+app/views/api/v1/places/index.json.jbuilder:12:in `[]'
+app/views/api/v1/places/index.json.jbuilder:12:in `block in _app_views_api_v__places_index_json_jbuilder___929441795168862582_70193460840440'
+app/views/api/v1/places/index.json.jbuilder:11:in `_app_views_api_v__places_index_json_jbuilder___929441795168862582_70193460840440'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.0ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 01:26:21 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (4.2ms)
+Completed 500 Internal Server Error in 1157ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `result' for ["html_attributions", []]:Array):
+    10: # end
+    11: json.array!(@places) do |place|
+    12:     #json.name place["result"]["name"]
+    13:     json.name place.result.name
+    14:     #json.occupancy place.occupancy
+    15:     #json.place_id place["result"]["place_id"]
+    16:     #json.lat place["result"]["geometry"]["location"]["lat"]
+  
+app/views/api/v1/places/index.json.jbuilder:13:in `block in _app_views_api_v__places_index_json_jbuilder___929441795168862582_70193438762340'
+app/views/api/v1/places/index.json.jbuilder:11:in `_app_views_api_v__places_index_json_jbuilder___929441795168862582_70193438762340'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.6ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 01:26:55 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (3.9ms)
+Completed 500 Internal Server Error in 384ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `result' for ["html_attributions", []]:Array):
+    10: # end
+    11: json.array!(@places) do |place|
+    12:     #json.name place["result"]["name"]
+    13:     json.name place.result.name
+    14:     #json.occupancy place.occupancy
+    15:     #json.place_id place["result"]["place_id"]
+    16:     #json.lat place["result"]["geometry"]["location"]["lat"]
+  
+app/views/api/v1/places/index.json.jbuilder:13:in `block in _app_views_api_v__places_index_json_jbuilder___929441795168862582_70193431971040'
+app/views/api/v1/places/index.json.jbuilder:11:in `_app_views_api_v__places_index_json_jbuilder___929441795168862582_70193431971040'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.9ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 01:27:13 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (3.7ms)
+Completed 500 Internal Server Error in 251ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `result' for ["html_attributions", []]:Array):
+    10: # end
+    11: json.array!(@places) do |place|
+    12:     #json.name place["result"]["name"]
+    13:     json.name place.result.name
+    14:     #json.occupancy place.occupancy
+    15:     #json.place_id place["result"]["place_id"]
+    16:     #json.lat place["result"]["geometry"]["location"]["lat"]
+  
+app/views/api/v1/places/index.json.jbuilder:13:in `block in _app_views_api_v__places_index_json_jbuilder___929441795168862582_70193427202140'
+app/views/api/v1/places/index.json.jbuilder:11:in `_app_views_api_v__places_index_json_jbuilder___929441795168862582_70193427202140'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.2ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 01:28:16 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (3.1ms)
+Completed 500 Internal Server Error in 1210ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for #<Net::HTTPOK 200 OK readbody=true>
+Did you mean?  tap):
+     8: #     json.type place.types
+     9: #     #json.description place.description
+    10: # end
+    11: json.array!(@places) do |place|
+    12:     #json.name place["result"]["name"]
+    13:     json.name place.result.name
+    14:     #json.occupancy place.occupancy
+  
+app/views/api/v1/places/index.json.jbuilder:11:in `_app_views_api_v__places_index_json_jbuilder___929441795168862582_70193468866580'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.9ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 01:28:43 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (4.2ms)
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for #<String:0x007fae5e7ed0d8>
+Did you mean?  tap):
+     8: #     json.type place.types
+     9: #     #json.description place.description
+    10: # end
+    11: json.array!(@places) do |place|
+    12:     #json.name place["result"]["name"]
+    13:     json.name place.result.name
+    14:     #json.occupancy place.occupancy
+  
+app/views/api/v1/places/index.json.jbuilder:11:in `_app_views_api_v__places_index_json_jbuilder___929441795168862582_70193438486520'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (84.7ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 01:29:23 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (4.2ms)
+Completed 500 Internal Server Error in 984ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `result' for ["html_attributions", []]:Array):
+    10: # end
+    11: json.array!(@places) do |place|
+    12:     #json.name place["result"]["name"]
+    13:     json.name place.result.name
+    14:     #json.occupancy place.occupancy
+    15:     #json.place_id place["result"]["place_id"]
+    16:     #json.lat place["result"]["geometry"]["location"]["lat"]
+  
+app/views/api/v1/places/index.json.jbuilder:13:in `block in _app_views_api_v__places_index_json_jbuilder___929441795168862582_70193437522120'
+app/views/api/v1/places/index.json.jbuilder:11:in `_app_views_api_v__places_index_json_jbuilder___929441795168862582_70193437522120'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.5ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 01:30:04 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (3.9ms)
+Completed 500 Internal Server Error in 273ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `result' for ["html_attributions", []]:Array):
+    10: # end
+    11: json.array!(@places) do |place|
+    12:     #json.name place["result"]["name"]
+    13:     json.name place.result.name
+    14:     #json.occupancy place.occupancy
+    15:     #json.place_id place["result"]["place_id"]
+    16:     #json.lat place["result"]["geometry"]["location"]["lat"]
+  
+app/views/api/v1/places/index.json.jbuilder:13:in `block in _app_views_api_v__places_index_json_jbuilder___929441795168862582_70193468444700'
+app/views/api/v1/places/index.json.jbuilder:11:in `_app_views_api_v__places_index_json_jbuilder___929441795168862582_70193468444700'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.8ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 01:30:29 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (5.6ms)
+Completed 500 Internal Server Error in 1107ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `result' for ["html_attributions", []]:Array):
+    10: # end
+    11: json.array!(@places) do |place|
+    12:     #json.name place["result"]["name"]
+    13:     json.name place.result.name
+    14:     #json.occupancy place.occupancy
+    15:     #json.place_id place["result"]["place_id"]
+    16:     #json.lat place["result"]["geometry"]["location"]["lat"]
+  
+app/views/api/v1/places/index.json.jbuilder:13:in `block in _app_views_api_v__places_index_json_jbuilder___929441795168862582_70193442503820'
+app/views/api/v1/places/index.json.jbuilder:11:in `_app_views_api_v__places_index_json_jbuilder___929441795168862582_70193442503820'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.7ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=pizza%20house" for ::1 at 2016-11-07 01:32:33 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"pizza house"}
+  Rendering api/v1/places/index.json.jbuilder
+  Rendered api/v1/places/index.json.jbuilder (3.2ms)
+Completed 200 OK in 769ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 01:44:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+Completed 500 Internal Server Error in 1150ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `body' for #<GooglePlaces::Spot:0x007fb792979568>):
+  
+app/controllers/api/v1/places_controller.rb:9:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.6ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 02:01:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+SyntaxError (/Users/raja/Documents/classes/441/SpotCheck/api/app/controllers/api/v1/places_controller.rb:18: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+            placesdict["type"] place.types
+                                    ^):
+  
+app/controllers/api/v1/places_controller.rb:18: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.4ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.8ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 02:01:44 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+Completed 500 Internal Server Error in 1337ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `placesarray' for #<Api::V1::PlacesController:0x007fa7b612b140>
+Did you mean?  @placesarray):
+  
+app/controllers/api/v1/places_controller.rb:19:in `block in index'
+app/controllers/api/v1/places_controller.rb:11:in `each'
+app/controllers/api/v1/places_controller.rb:11:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (106.0ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 02:01:55 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+Completed 500 Internal Server Error in 356ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `placesarray' for #<Api::V1::PlacesController:0x007fa7b2356ae0>
+Did you mean?  @placesarray):
+  
+app/controllers/api/v1/places_controller.rb:19:in `block in index'
+app/controllers/api/v1/places_controller.rb:11:in `each'
+app/controllers/api/v1/places_controller.rb:11:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (113.1ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 02:02:13 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+Completed 500 Internal Server Error in 344ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `placesarray' for #<Api::V1::PlacesController:0x007fa7b2cdc4c0>
+Did you mean?  @placesarray):
+  
+app/controllers/api/v1/places_controller.rb:19:in `block in index'
+app/controllers/api/v1/places_controller.rb:11:in `each'
+app/controllers/api/v1/places_controller.rb:11:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.9ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 02:02:31 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+  [1m[36mPlace Load (2.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJbQx870SuPIgRG35NOMlQE68"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 3.3ms)
+
+
+  
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  
+app/controllers/api/v1/places_controller.rb:25:in `block in index'
+app/controllers/api/v1/places_controller.rb:22:in `each'
+app/controllers/api/v1/places_controller.rb:22:in `each_with_index'
+app/controllers/api/v1/places_controller.rb:22:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.4ms)
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 02:02:44 -0500
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJbQx870SuPIgRG35NOMlQE68"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJR1h74zeuPIgRbrqkAYvpM8E"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjSLe70SuPIgRP1kmtqvDgQA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJw0ARSESuPIgR28Aggj-2E3E"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJA3q9y0WuPIgRVA6XbahB8Oc"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKYz5lECuPIgRtTK0ZWmenJE"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJgxFrSUSuPIgRNMHA3whSTiA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ9ZEcWkSuPIgRr4Y5q0jmYH0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJwV66zEeuPIgRdNdmyYbwYpY"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJr_YT60CuPIgRpIvRX_OkyBc"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJn_kuSUSuPIgRcBiDCV5-9lg"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ_YBk70SuPIgReOBonAvNao0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJWS_dSESuPIgRxgbmjSWo2SA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ50UHyEWuPIgROM0nxzz5j3A"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJtyBXSESuPIgR06jZWywGJJg"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJRYTP6ESuPIgRYDEBFXASCfI"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ7yODLkSuPIgRZX3JiICGBVo"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJYXQ9pkCuPIgRv3yJbrZ9zjY"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ8W1G1UWuPIgR6Jetrkwtshk"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 400ms (Views: 1.9ms | ActiveRecord: 23.8ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" = $1 LIMIT $2[0m  [["address", "919 S University Ave, Ann Arbor, MI 48109"], ["LIMIT", 1]]
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "places" ("name", "occupancy", "address", "category", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Ugli"], ["occupancy", 3.14], ["address", "919 S University Ave, Ann Arbor, MI 48109"], ["category", "Library"], ["description", "The ugliest library in town"], ["created_at", 2016-11-07 07:04:09 UTC], ["updated_at", 2016-11-07 07:04:09 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" = $1 LIMIT $2[0m  [["address", "South University Galleria Shopping Center, 611 Church St, Ann Arbor, MI 48104"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "places" ("name", "occupancy", "address", "category", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Rick's"], ["occupancy", 4.99], ["address", "South University Galleria Shopping Center, 611 Church St, Ann Arbor, MI 48104"], ["category", "Bar"], ["description", "Rick's American Cafe - Where Friends Meet!"], ["created_at", 2016-11-07 07:04:09 UTC], ["updated_at", 2016-11-07 07:04:09 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 02:04:50 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJbQx870SuPIgRG35NOMlQE68"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJR1h74zeuPIgRbrqkAYvpM8E"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjSLe70SuPIgRP1kmtqvDgQA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (1.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJw0ARSESuPIgR28Aggj-2E3E"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJA3q9y0WuPIgRVA6XbahB8Oc"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKYz5lECuPIgRtTK0ZWmenJE"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJgxFrSUSuPIgRNMHA3whSTiA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ9ZEcWkSuPIgRr4Y5q0jmYH0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJwV66zEeuPIgRdNdmyYbwYpY"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJr_YT60CuPIgRpIvRX_OkyBc"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJn_kuSUSuPIgRcBiDCV5-9lg"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ_YBk70SuPIgReOBonAvNao0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJWS_dSESuPIgRxgbmjSWo2SA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ50UHyEWuPIgROM0nxzz5j3A"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJtyBXSESuPIgR06jZWywGJJg"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJRYTP6ESuPIgRYDEBFXASCfI"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ7yODLkSuPIgRZX3JiICGBVo"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJYXQ9pkCuPIgRv3yJbrZ9zjY"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ8W1G1UWuPIgR6Jetrkwtshk"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."address" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 1114ms (Views: 3.2ms | ActiveRecord: 23.5ms)
+
+
+  [1m[36mPlace Load (1.5ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (202.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "spotcheck_development"[0m
+  [1m[35m (194.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "spotcheck_test"[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7180199670664967835);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePlaces (20161028003222)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.2ms)[0m  [1m[35mCREATE TABLE "places" ("id" serial primary key, "placeid" character varying, "name" character varying, "occupancy" float, "address" character varying, "category" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161028003222"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFavorites (20161107003738)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" serial primary key, "placeid_id" integer, "deviceid_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_placeid_id" ON "favorites"  ("placeid_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_deviceid_id" ON "favorites"  ("deviceid_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161107003738"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDevices (20161107004624)
+  [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "devices" ("id" serial primary key, "deviceid" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161107004624"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-11-07 07:08:34 UTC], ["updated_at", 2016-11-07 07:08:34 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7180199670664967835)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'devices'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'favorites'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'places'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJbQx870SuPIgRG35NOMlQE68"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["placeid", "ChIJbQx870SuPIgRG35NOMlQE68"], ["name", "Ugli"], ["occupancy", 3.14], ["address", "919 S University Ave, Ann Arbor, MI 48109"], ["category", "Library"], ["description", "The ugliest library in town"], ["created_at", 2016-11-07 07:09:06 UTC], ["updated_at", 2016-11-07 07:09:06 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJR1h74zeuPIgRbrqkAYvpM8E"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["placeid", "ChIJR1h74zeuPIgRbrqkAYvpM8E"], ["name", "Rick's"], ["occupancy", 4.99], ["address", "South University Galleria Shopping Center, 611 Church St, Ann Arbor, MI 48104"], ["category", "Bar"], ["description", "Rick's American Cafe - Where Friends Meet!"], ["created_at", 2016-11-07 07:09:06 UTC], ["updated_at", 2016-11-07 07:09:06 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+Started GET "/v1/places?lat=42.27441200000001&lng=-83.7342578&keyword=restaurant" for ::1 at 2016-11-07 02:09:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"lat"=>"42.27441200000001", "lng"=>"-83.7342578", "keyword"=>"restaurant"}
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJbQx870SuPIgRG35NOMlQE68"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJR1h74zeuPIgRbrqkAYvpM8E"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjSLe70SuPIgRP1kmtqvDgQA"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjSLe70SuPIgRP1kmtqvDgQA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJw0ARSESuPIgR28Aggj-2E3E"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJw0ARSESuPIgR28Aggj-2E3E"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJA3q9y0WuPIgRVA6XbahB8Oc"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJA3q9y0WuPIgRVA6XbahB8Oc"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKYz5lECuPIgRtTK0ZWmenJE"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKYz5lECuPIgRtTK0ZWmenJE"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJgxFrSUSuPIgRNMHA3whSTiA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJgxFrSUSuPIgRNMHA3whSTiA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ9ZEcWkSuPIgRr4Y5q0jmYH0"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ9ZEcWkSuPIgRr4Y5q0jmYH0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJwV66zEeuPIgRdNdmyYbwYpY"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJwV66zEeuPIgRdNdmyYbwYpY"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJr_YT60CuPIgRpIvRX_OkyBc"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJr_YT60CuPIgRpIvRX_OkyBc"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJn_kuSUSuPIgRcBiDCV5-9lg"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJn_kuSUSuPIgRcBiDCV5-9lg"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ_YBk70SuPIgReOBonAvNao0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ_YBk70SuPIgReOBonAvNao0"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJWS_dSESuPIgRxgbmjSWo2SA"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJWS_dSESuPIgRxgbmjSWo2SA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ50UHyEWuPIgROM0nxzz5j3A"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ50UHyEWuPIgROM0nxzz5j3A"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJtyBXSESuPIgR06jZWywGJJg"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJtyBXSESuPIgR06jZWywGJJg"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJRYTP6ESuPIgRYDEBFXASCfI"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJRYTP6ESuPIgRYDEBFXASCfI"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ7yODLkSuPIgRZX3JiICGBVo"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ7yODLkSuPIgRZX3JiICGBVo"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJYXQ9pkCuPIgRv3yJbrZ9zjY"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJYXQ9pkCuPIgRv3yJbrZ9zjY"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ8W1G1UWuPIgR6Jetrkwtshk"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ8W1G1UWuPIgR6Jetrkwtshk"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 1247ms (Views: 2.7ms | ActiveRecord: 22.4ms)
+
+

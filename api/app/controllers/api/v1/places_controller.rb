@@ -6,6 +6,36 @@ class Api::V1::PlacesController < ApplicationController
         keyword = params[:keyword]
         @client = GooglePlaces::Client.new(api_key)
         @places = @client.spots(lat, lng, keyword: keyword, radius: 500)
+
+        # build hashes just to include occupancy and turn to json
+        @placesarray = []
+        @places.each do |place|
+            placesdict = {}
+            placesdict["placeid"] = place.place_id
+            placesdict["lat"] = place.lat
+            placesdict["lng"] = place.lng
+            placesdict["name"] = place.name
+            placesdict["address"] = place.vicinity
+            placesdict["type"] = place.types
+            @placesarray.push(placesdict)
+        end
+
+        @places.each_with_index do |place, index|
+            placeid = place.place_id
+            findplace = Place.find_by(placeid: placeid)
+            unless findplace.nil?
+                occupancy = findplace.occupancy
+                @placesarray[index]["occupancy"] = occupancy
+            else
+                Place.create(
+                    placeid: placeid,
+                    occupancy: 5
+                )
+                @placesarray[index]["occupancy"] = 5
+            end
+        end
+        @placesarray.map { |x| x.to_json }
+        render json: @placesarray
     end
 
     def show
@@ -28,25 +58,18 @@ class Api::V1::PlacesController < ApplicationController
             description: params[:description]
         )
         if @place.save
-            # flash success
             return render json: { status: "ok", message: ":)" }
         end
         render json: { status: "error", message: ":(" }
-        # flash warning
-        # return
     end
 
     def update
         @place = Place.where(address: params[:address])
-        #fix this
         average = (params[:occupancy] + @place.occupancy)/2
         if @place.update(occupancy: average)
-            # redirect
             return render json: { status: "ok", message: ":)" }
         end
-        render json: { status: "error", message: ":(" }
-            # redirect to edit
-        
+        render json: { status: "error", message: ":(" }        
     end
 
     def destroy
