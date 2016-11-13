@@ -13,3 +13,149 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+    background-color: #fffd38
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#check-map-button {
+    background-color: black;
+    font-family: 'Oswald', sans-serif;
+    color: yellow;
+}
+
+#favorites-button {
+    background-color: black;
+    font-family: 'Oswald', sans-serif;
+    color: yellow;
+}
+
+#search-map-button {
+    background-color: black;
+    font-family: 'Oswald', sans-serif;
+    color: yellow;
+}
+
+.favorites-text {
+    float: right;
+    font-family: 'Oswald', sans-serif;
+}
+
+.favorite {
+    width: 100%;
+    min-height: 100px;
+    line-height: 100px;
+}
+
+#location-rate-div {
+    border: solid;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.graph {
+    width: 100px;
+    height: 50px;
+    border: 1px solid #aeaeae;
+    background-color: #eaeaea;
+}
+
+.bar {
+    width: 8px;
+    margin: 1px;
+    display: inline-block;
+    position: relative;
+    background-color: #aeaeae;
+    vertical-align: baseline;
+}
+
+.location-div {
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    border: solid;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.star-size {
+    font-size: 3em;
+}
+
+.rating-stars {
+    display: inline-block;
+    max-width: 10px;
+}
+
+.location-rate {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    text-align: center;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+} 
+
+.divSplit {
+    display: inline-block;
+    width: 700px;
+    margin: 1em;
+}
+
+#divleft {
+    min-height: 100px;
+    min-width: 50px;
+    overflow: hidden;
+}
+
+#divright {
+    min-height: 100px;
+    overflow: hidden;
+    border-left:1px solid #000;
+    padding-left: 30px;
+    position: absolute;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 300%;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: black;
+  display: block;
+  margin-left: 7%;
+  float: left;
+}
