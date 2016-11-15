@@ -1,4 +1,7 @@
 class FavoritesController < ApplicationController
+    def index
+    end
+    
     def create
         deviceid = params[:deviceid]
         placeid = params[:placeid]
