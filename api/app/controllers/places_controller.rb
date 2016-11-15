@@ -1,4 +1,4 @@
-class Api::V1::PlacesController < ApplicationController
+class PlacesController < ApplicationController
     def index
         api_key = "AIzaSyClAPqmEMkzet9hUwkXdh8Qcg8FZg6e2qI"   
         lat = params[:lat]

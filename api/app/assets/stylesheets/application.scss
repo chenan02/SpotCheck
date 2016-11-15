@@ -62,6 +62,21 @@ body {
     margin-right: auto;
 }
 
+#current-rating-div {
+    background-color: black;
+    border: solid;
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#current-rating-div h3{
+    color: yellow;
+    font-size: 45px;
+    font-weight: bold;
+}
+
 .graph {
     width: 100px;
     height: 50px;
@@ -93,8 +108,17 @@ body {
     margin-right: auto;
 }
 
+.location-rating {
+    background-color: black;
+    color: yellow;
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
 .star-size {
-    font-size: 3em;
+    font-size: 6em;
 }
 
 .rating-stars {
@@ -103,6 +127,12 @@ body {
 }
 
 .location-rate {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#r1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -160,3 +190,102 @@ hr {
   margin-left: 7%;
   float: left;
 }
+
+.rate {
+    text-align: center;
+}
+
+.graph_fancy {
+    border-width: 0 0 0px 0px;
+    border-style: solid;
+    border-color: black;
+    height: 300px;
+    margin: 0 0 30px 0;
+    position: relative;
+    white-space: nowrap;
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    width: 64%;
+
+
+
+    background: yellow;
+}
+.graph_fancy:before { /* Y-axis label */
+    display: block;
+    padding: .5em;
+    position: absolute;
+    right: 100%;
+    top: 48%;
+
+    content: attr(data-y-label);
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+}
+.graph_fancy:after { /* X-axis label */
+    display: block;
+    left: 0;
+    margin: 1em 0 0 0;
+    padding: .75em 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+
+    content: attr(data-x-label);
+    font-size: 25px;
+    line-height: 1;
+    text-align: center;
+}
+.graph_fancy .bar {
+    display: inline-block;
+    margin: 0 0 0 1px;
+    vertical-align: bottom;
+    position: relative;
+    width: 8.12%;
+
+    background: black;
+    cursor: pointer;
+}
+.graph_fancy .bar:first-child {
+    height: 100%;
+    margin: 0;
+    width: 0;
+}
+.graph_fancy .bar:hover {
+    z-index: 100;
+
+    background: #fc0;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+}
+.graph_fancy .bar:before { /* Bar label */
+    display: block;
+    left: 0;
+    padding: .15em 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+
+    content: attr(data-bar-label);
+    font-size: 15px;
+    opacity: .5;
+    text-align: center;
+}
+.graph_fancy .bar:after { /* Bar data value */
+    bottom: 100%;
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+    content: attr(data-bar-value);
+    font-size: 15px;
+    opacity: .5;
+    text-align: center;
+}
+.graph_fancy .bar, .graph_fancy .bar:before, .graph_fancy .bar:after {
+    transition: background .25s ease-out, opacity .25s ease-out, box-shadow .25s ease-out;
+}
+.graph_fancy .bar:hover:before, .graph_fancy .bar:hover:after { opacity: 1; }
+

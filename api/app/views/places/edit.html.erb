@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag 'rating' %>
+<%= javascript_include_tag 'rating' %>
 <h1> Rate this location: </h1>
 
 <div id="location-rate-div">
@@ -6,57 +8,46 @@
 
 <br>
 
-<div class='location-rate'>
-    <div id="r1" class="rate_widget row">
-        <div id="star_1" class="ratings_stars star-size col-xs-1">
-            <span class="glyphicon glyphicon-star-empty" aria-hidden="true">
-            </span>
-        </div>
-        <div id="star_2" class="ratings_stars star-size col-xs-1">
-            <span class="glyphicon glyphicon-star-empty" aria-hidden="true">
-            </span>
-        </div>
-        <div id="star_3" class="ratings_stars star-size col-xs-1">
-            <span class="glyphicon glyphicon-star-empty" aria-hidden="true">
-            </span>
-        </div>
-        <div id="star_4" class="ratings_stars star-size col-xs-1">
-            <span class="glyphicon glyphicon-star-empty" aria-hidden="true">
-            </span>
-        </div>
-        <div id="star_5" class="ratings_stars star-size col-xs-1">
-            <span class="glyphicon glyphicon-star-empty" aria-hidden="true">
-            </span>
-        </div>
-        <div id="star_6" class="ratings_stars star-size col-xs-1">
-            <span class="glyphicon glyphicon-star-empty" aria-hidden="true">
-            </span>
-        </div>
-        <div id="star_7" class="ratings_stars star-size col-xs-1">
-            <span class="glyphicon glyphicon-star-empty" aria-hidden="true">
-            </span>
-        </div>
-        <div id="star_8" class="ratings_stars star-size col-xs-1">
-            <span class="glyphicon glyphicon-star-empty" aria-hidden="true">
-            </span>
-        </div>
-        <div id="star_9" class="ratings_stars star-size col-xs-1">
-            <span class="glyphicon glyphicon-star-empty" aria-hidden="true">
-            </span>
-        </div>
-        <div id="star_10" class="ratings_stars star-size col-xs-1">
-            <span class="glyphicon glyphicon-star-empty" aria-hidden="true">
-            </span>
-        </div>
-    </div>
+<div class="rate">
+  <span class="rating big-red" data-default-rating="0"></span>
 </div>
+<br>
 
-<br>
-<br>
+
 <div class="span7 text-center">
     <input id="check-map-button" class="btn btn-primary btn-lg" type="submit" value="Rate">
 </div>
+<br>
+
+<div class="add-to-favorites-div">
+    <h3 class="add-to-favorites"> Add to favorites! </h3>
+</div>
+
+<div class="span7 text-center">
+    <input id="check-map-button" class="btn btn-primary btn-lg" type="submit" value="Favorite">
+</div>
+<br>
 
 <div id="share-rating">
     <h3 id="share-rate-id"> Share your rating ! </h3>
 </div>
+
+<div class="span7 text-center">
+    <input id="check-map-button" class="btn btn-primary btn-lg" type="submit" value="Twitter">
+</div>
+
+<br>
+
+<div class="span7 text-center">
+    <input id="check-map-button" class="btn btn-primary btn-lg" type="submit" value="Facebook">
+</div>
+
+<script>
+    var ratings = document.getElementsByClassName('rating');
+    for (var i = 0; i < ratings.length; i++) {
+        var r = new SimpleStarRating(ratings[i]);
+        ratings[i].addEventListener('rate', function(e) {
+            console.log('Rating: ' + e.detail);
+        });
+    }
+</script>
