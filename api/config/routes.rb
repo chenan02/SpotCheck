@@ -4,4 +4,9 @@ Rails.application.routes.draw do
     resources :places
     resources :favorites
     resources :devices
+    resources :users
+    resources :sessions
+    get '/signup', to: 'users#new'
+    get '/login', to: 'sessions#new'
+    match '/logout', to: 'sessions#destroy', via: :delete 
 end

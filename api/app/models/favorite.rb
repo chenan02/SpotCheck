@@ -1,5 +1,5 @@
 class Favorite < ApplicationRecord
-    validates_presence_of :deviceid, :placeid
-    belongs_to :device
+    validates_presence_of :userid, :placeid
+    belongs_to :user
     belongs_to :place
 end
