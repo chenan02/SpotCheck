@@ -8416,3 +8416,855 @@ Processing by PlacesController#edit as HTML
 Completed 200 OK in 100ms (Views: 97.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2016-11-17 01:07:12 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (329.1ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 530ms (Views: 520.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-17 01:07:13 -0500
+Processing by ApplicationController#index as HTML
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (8.7ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 238ms (Views: 237.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for ::1 at 2016-11-17 01:07:17 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["name", "Ann Arbor"], ["occupancy", 5.0], ["address", "Ann Arbor"], ["category", "[\"locality\", \"political\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["name", "University of Michigan"], ["occupancy", 5.0], ["address", "500 South State Street, Ann Arbor"], ["category", "[\"university\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["name", "Urban Outfitters"], ["occupancy", 5.0], ["address", "231 South State Street, Ann Arbor"], ["category", "[\"clothing_store\", \"shoe_store\", \"home_goods_store\", \"store\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["name", "Starbucks"], ["occupancy", 5.0], ["address", "222 South State Street, Ann Arbor"], ["category", "[\"cafe\", \"food\", \"store\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["name", "University of Michigan School of Dentistry"], ["occupancy", 5.0], ["address", "1011 North University Avenue, Ann Arbor"], ["category", "[\"dentist\", \"doctor\", \"health\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["name", "Michigan League"], ["occupancy", 5.0], ["address", "911 North University Avenue, Ann Arbor"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["name", "Douglas J Aveda Institute"], ["occupancy", 5.0], ["address", "333 Maynard Street #201, Ann Arbor"], ["category", "[\"beauty_salon\", \"spa\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["name", "Hill Auditorium & Burton Tower"], ["occupancy", 5.0], ["address", "North University Avenue, Ann Arbor"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["name", "Michigan Theater"], ["occupancy", 5.0], ["address", "603 East Liberty Street, Ann Arbor"], ["category", "[\"movie_theater\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["name", "Bell Tower Hotel"], ["occupancy", 5.0], ["address", "300 South Thayer Street, Ann Arbor"], ["category", "[\"lodging\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["name", "CVS Pharmacy"], ["occupancy", 5.0], ["address", "209 South State Street, Ann Arbor"], ["category", "[\"pharmacy\", \"health\", \"store\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["name", "Ashley's"], ["occupancy", 5.0], ["address", "338 South State Street, Ann Arbor"], ["category", "[\"bar\", \"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["name", "Rackham Auditorium"], ["occupancy", 5.0], ["address", "915 East Washington Street, Ann Arbor"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["name", "Tower Plaza Condominium"], ["occupancy", 5.0], ["address", "555 East William Street, Ann Arbor"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["name", "Michigan Union"], ["occupancy", 5.0], ["address", "530 South State Street, Ann Arbor"], ["category", "[\"university\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["name", "University of Michigan Law School"], ["occupancy", 5.0], ["address", "625 South State Street, Ann Arbor"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["name", "Lydia Mendelssohn Theatre"], ["occupancy", 5.0], ["address", "911 North University Avenue, Ann Arbor"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["name", "North Quadrangle Residential and Academic Complex"], ["occupancy", 5.0], ["address", "105 South State Street, Ann Arbor"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["name", "Burns Park"], ["occupancy", 5.0], ["address", "Ann Arbor"], ["category", "[\"neighborhood\", \"political\"]"], ["created_at", 2016-11-17 06:07:19 UTC], ["updated_at", 2016-11-17 06:07:19 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (4.5ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 1526ms (Views: 90.2ms | ActiveRecord: 51.2ms)
+
+
+Started GET "/favorites" for ::1 at 2016-11-17 01:07:40 -0500
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  Rendered favorites/index.html.erb within layouts/application (0.5ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 123ms (Views: 116.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/1/edit" for ::1 at 2016-11-17 01:07:42 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/edit.html.erb within layouts/application (7.9ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 120ms (Views: 98.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-11-17 01:07:46 -0500
+Processing by ApplicationController#index as HTML
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (3.1ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+Completed 200 OK in 102ms (Views: 101.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for ::1 at 2016-11-17 01:07:49 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (3.4ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 524ms (Views: 92.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for ::1 at 2016-11-17 01:07:56 -0500
+Processing by ApplicationController#index as HTML
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (2.6ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 120ms (Views: 119.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favorites" for ::1 at 2016-11-17 01:07:57 -0500
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  Rendered favorites/index.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 105ms (Views: 102.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for ::1 at 2016-11-17 01:10:25 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (5.1ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 3591ms (Views: 116.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/places" for ::1 at 2016-11-17 01:11:59 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 925ms (ActiveRecord: 11.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `occupancy' for #<GooglePlaces::Spot:0x007fa130e24e00>):
+    21: 
+    22: <div class="location-div">
+    23:   <%= @closest.name %> 
+    24:   <h1 class="location-rating"> <%= @closest.occupancy %> </h1>
+    25:   <div class="btn-group btn-group-lg location-options" role="group" aria-label="...">
+    26:       <button type="button" class="btn btn-default">Map</button>
+    27:       <button type="button" class="btn btn-default">Info</button>
+  
+app/views/places/index.html.erb:24:in `_app_views_places_index_html_erb___1275412587659124824_70165117586260'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.7ms)
+Started GET "/places" for ::1 at 2016-11-17 01:13:56 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (3.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (4.1ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 3710ms (Views: 102.2ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/" for ::1 at 2016-11-17 01:14:18 -0500
+Processing by ApplicationController#index as HTML
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (3.0ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 117ms (Views: 116.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=restaurants&commit=Search+Map" for ::1 at 2016-11-17 01:14:29 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"restaurants", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKZsHcD-uPIgRWNPeLQKzGis"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZZG58j6uPIgR1ohn-NPf_Jw"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ18-4Nj-uPIgRCRbGKlNUZHU"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjSLe70SuPIgRP1kmtqvDgQA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0518hECuPIgRQOgqLkeI6fA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJbQx870SuPIgRG35NOMlQE68"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy-y5rT-uPIgRGlq5FZsa-N4"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJhUJVeEeuPIgRM6ZtJ6dJ3Nk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJsYGIhECuPIgRbrPAhdk62A8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJu9W4fD-uPIgRKLcd_YjV04s"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJkYCCcz-uPIgReS6g4YFAUJM"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm1d7DT-uPIgRI7Y-DwGNfuc"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm1d7DT-uPIgRI7Y-DwGNfuc"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJm1d7DT-uPIgRI7Y-DwGNfuc"], ["name", "TK WU Ann Arbor"], ["occupancy", 5.0], ["address", "510 East Liberty Street, Ann Arbor"], ["category", "[\"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:14:30 UTC], ["updated_at", 2016-11-17 06:14:30 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJQd-tQz-uPIgRnEKEr1N5Ink"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJQd-tQz-uPIgRnEKEr1N5Ink"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJQd-tQz-uPIgRnEKEr1N5Ink"], ["name", "Madras Masala"], ["occupancy", 5.0], ["address", "328 Maynard Street, Ann Arbor"], ["category", "[\"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:14:30 UTC], ["updated_at", 2016-11-17 06:14:30 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJA4cOLj-uPIgRXwsXcbwwjI8"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJA4cOLj-uPIgRXwsXcbwwjI8"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJA4cOLj-uPIgRXwsXcbwwjI8"], ["name", "NeoPapalis"], ["occupancy", 5.0], ["address", "500 East William Street, Ann Arbor"], ["category", "[\"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:14:30 UTC], ["updated_at", 2016-11-17 06:14:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJDycuHT-uPIgR8ePLp1E0M6Y"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJDycuHT-uPIgR8ePLp1E0M6Y"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJDycuHT-uPIgR8ePLp1E0M6Y"], ["name", "Ginger Deli"], ["occupancy", 5.0], ["address", "303 South Division Street, Ann Arbor"], ["category", "[\"restaurant\", \"food\", \"store\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:14:30 UTC], ["updated_at", 2016-11-17 06:14:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJV4YnDD-uPIgRj9JFDo-9QuA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJV4YnDD-uPIgRj9JFDo-9QuA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJV4YnDD-uPIgRj9JFDo-9QuA"], ["name", "Tomukun Korean BBQ"], ["occupancy", 5.0], ["address", "505 East Liberty Street Suite 100, Ann Arbor"], ["category", "[\"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:14:30 UTC], ["updated_at", 2016-11-17 06:14:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJBdsvmUCuPIgRd7xwAv1Y5H8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ50UHyEWuPIgROM0nxzz5j3A"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJxakU8D6uPIgRDkVcXiJ1mA4"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJxakU8D6uPIgRDkVcXiJ1mA4"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "name", "occupancy", "address", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["placeid", "ChIJxakU8D6uPIgRDkVcXiJ1mA4"], ["name", "Isalita"], ["occupancy", 5.0], ["address", "341 East Liberty Street, Ann Arbor"], ["category", "[\"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-11-17 06:14:30 UTC], ["updated_at", 2016-11-17 06:14:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKZsHcD-uPIgRWNPeLQKzGis"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZZG58j6uPIgR1ohn-NPf_Jw"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ18-4Nj-uPIgRCRbGKlNUZHU"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjSLe70SuPIgRP1kmtqvDgQA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0518hECuPIgRQOgqLkeI6fA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJbQx870SuPIgRG35NOMlQE68"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy-y5rT-uPIgRGlq5FZsa-N4"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJhUJVeEeuPIgRM6ZtJ6dJ3Nk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJsYGIhECuPIgRbrPAhdk62A8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJu9W4fD-uPIgRKLcd_YjV04s"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJkYCCcz-uPIgReS6g4YFAUJM"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm1d7DT-uPIgRI7Y-DwGNfuc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJQd-tQz-uPIgRnEKEr1N5Ink"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJA4cOLj-uPIgRXwsXcbwwjI8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJDycuHT-uPIgR8ePLp1E0M6Y"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJV4YnDD-uPIgRj9JFDo-9QuA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJBdsvmUCuPIgRd7xwAv1Y5H8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ50UHyEWuPIgROM0nxzz5j3A"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJxakU8D6uPIgRDkVcXiJ1mA4"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKZsHcD-uPIgRWNPeLQKzGis"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (3.9ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 1682ms (Views: 85.8ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=restaurants&commit=Search+Map" for ::1 at 2016-11-17 01:18:01 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"restaurants", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKZsHcD-uPIgRWNPeLQKzGis"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZZG58j6uPIgR1ohn-NPf_Jw"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ18-4Nj-uPIgRCRbGKlNUZHU"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjSLe70SuPIgRP1kmtqvDgQA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0518hECuPIgRQOgqLkeI6fA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJbQx870SuPIgRG35NOMlQE68"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy-y5rT-uPIgRGlq5FZsa-N4"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJhUJVeEeuPIgRM6ZtJ6dJ3Nk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJsYGIhECuPIgRbrPAhdk62A8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJu9W4fD-uPIgRKLcd_YjV04s"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJkYCCcz-uPIgReS6g4YFAUJM"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm1d7DT-uPIgRI7Y-DwGNfuc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJQd-tQz-uPIgRnEKEr1N5Ink"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJA4cOLj-uPIgRXwsXcbwwjI8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJDycuHT-uPIgR8ePLp1E0M6Y"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJV4YnDD-uPIgRj9JFDo-9QuA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJBdsvmUCuPIgRd7xwAv1Y5H8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ50UHyEWuPIgROM0nxzz5j3A"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJxakU8D6uPIgRDkVcXiJ1mA4"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKZsHcD-uPIgRWNPeLQKzGis"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZZG58j6uPIgR1ohn-NPf_Jw"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ18-4Nj-uPIgRCRbGKlNUZHU"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjSLe70SuPIgRP1kmtqvDgQA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0518hECuPIgRQOgqLkeI6fA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJbQx870SuPIgRG35NOMlQE68"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy-y5rT-uPIgRGlq5FZsa-N4"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJhUJVeEeuPIgRM6ZtJ6dJ3Nk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJsYGIhECuPIgRbrPAhdk62A8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJu9W4fD-uPIgRKLcd_YjV04s"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJkYCCcz-uPIgReS6g4YFAUJM"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm1d7DT-uPIgRI7Y-DwGNfuc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJQd-tQz-uPIgRnEKEr1N5Ink"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJA4cOLj-uPIgRXwsXcbwwjI8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJDycuHT-uPIgR8ePLp1E0M6Y"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJV4YnDD-uPIgRj9JFDo-9QuA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJBdsvmUCuPIgRd7xwAv1Y5H8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ50UHyEWuPIgROM0nxzz5j3A"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJxakU8D6uPIgRDkVcXiJ1mA4"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKZsHcD-uPIgRWNPeLQKzGis"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (234.2ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 13726ms (Views: 435.8ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/places" for ::1 at 2016-11-17 01:18:40 -0500
+Processing by PlacesController#index as HTML
+Started GET "/places/24" for ::1 at 2016-11-17 01:18:41 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering places/show.html.erb within layouts/application
+  Rendered places/show.html.erb within layouts/application (0.9ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 137ms (Views: 130.1ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (6.7ms)
+  Rendered shared/_navbar.html.erb (0.4ms)
+Completed 200 OK in 2929ms (Views: 114.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/places/24/edit" for ::1 at 2016-11-17 01:18:46 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/edit.html.erb within layouts/application (16.1ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 167ms (Views: 160.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=restaurants&commit=Search+Map" for ::1 at 2016-11-17 01:20:53 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"restaurants", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKZsHcD-uPIgRWNPeLQKzGis"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZZG58j6uPIgR1ohn-NPf_Jw"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ18-4Nj-uPIgRCRbGKlNUZHU"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjSLe70SuPIgRP1kmtqvDgQA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0518hECuPIgRQOgqLkeI6fA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy-y5rT-uPIgRGlq5FZsa-N4"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJbQx870SuPIgRG35NOMlQE68"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJhUJVeEeuPIgRM6ZtJ6dJ3Nk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJsYGIhECuPIgRbrPAhdk62A8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJu9W4fD-uPIgRKLcd_YjV04s"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJkYCCcz-uPIgReS6g4YFAUJM"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ50UHyEWuPIgROM0nxzz5j3A"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJdc9KAj-uPIgRF_bGdp6gks8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJw0ARSESuPIgR28Aggj-2E3E"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJdY6vQz-uPIgRhZ0NSAAVr34"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJfaMiVz-uPIgROC17d3AMPQc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZQxjcj-uPIgR9ViTYOdGqgI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJAcihj0CuPIgRAb2vFb0CuJE"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJgxFrSUSuPIgRNMHA3whSTiA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKZsHcD-uPIgRWNPeLQKzGis"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZZG58j6uPIgR1ohn-NPf_Jw"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ18-4Nj-uPIgRCRbGKlNUZHU"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjSLe70SuPIgRP1kmtqvDgQA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0518hECuPIgRQOgqLkeI6fA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy-y5rT-uPIgRGlq5FZsa-N4"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJbQx870SuPIgRG35NOMlQE68"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJhUJVeEeuPIgRM6ZtJ6dJ3Nk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJsYGIhECuPIgRbrPAhdk62A8"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJu9W4fD-uPIgRKLcd_YjV04s"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJkYCCcz-uPIgReS6g4YFAUJM"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ50UHyEWuPIgROM0nxzz5j3A"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJdc9KAj-uPIgRF_bGdp6gks8"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJw0ARSESuPIgR28Aggj-2E3E"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJdY6vQz-uPIgRhZ0NSAAVr34"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJfaMiVz-uPIgROC17d3AMPQc"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZQxjcj-uPIgR9ViTYOdGqgI"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJAcihj0CuPIgRAb2vFb0CuJE"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJgxFrSUSuPIgRNMHA3whSTiA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKZsHcD-uPIgRWNPeLQKzGis"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (4.1ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+Completed 200 OK in 1521ms (Views: 97.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=restaurants&commit=Search+Map" for ::1 at 2016-11-17 01:21:43 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"restaurants", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKZsHcD-uPIgRWNPeLQKzGis"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZZG58j6uPIgR1ohn-NPf_Jw"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ18-4Nj-uPIgRCRbGKlNUZHU"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjSLe70SuPIgRP1kmtqvDgQA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0518hECuPIgRQOgqLkeI6fA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy-y5rT-uPIgRGlq5FZsa-N4"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJbQx870SuPIgRG35NOMlQE68"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJhUJVeEeuPIgRM6ZtJ6dJ3Nk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJsYGIhECuPIgRbrPAhdk62A8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJu9W4fD-uPIgRKLcd_YjV04s"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJkYCCcz-uPIgReS6g4YFAUJM"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ50UHyEWuPIgROM0nxzz5j3A"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJdc9KAj-uPIgRF_bGdp6gks8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJw0ARSESuPIgR28Aggj-2E3E"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJdY6vQz-uPIgRhZ0NSAAVr34"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJfaMiVz-uPIgROC17d3AMPQc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZQxjcj-uPIgR9ViTYOdGqgI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJAcihj0CuPIgRAb2vFb0CuJE"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJgxFrSUSuPIgRNMHA3whSTiA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKZsHcD-uPIgRWNPeLQKzGis"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZZG58j6uPIgR1ohn-NPf_Jw"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ18-4Nj-uPIgRCRbGKlNUZHU"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjSLe70SuPIgRP1kmtqvDgQA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0518hECuPIgRQOgqLkeI6fA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy-y5rT-uPIgRGlq5FZsa-N4"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJbQx870SuPIgRG35NOMlQE68"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJhUJVeEeuPIgRM6ZtJ6dJ3Nk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJsYGIhECuPIgRbrPAhdk62A8"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJu9W4fD-uPIgRKLcd_YjV04s"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJkYCCcz-uPIgReS6g4YFAUJM"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ50UHyEWuPIgROM0nxzz5j3A"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJdc9KAj-uPIgRF_bGdp6gks8"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJw0ARSESuPIgR28Aggj-2E3E"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJdY6vQz-uPIgRhZ0NSAAVr34"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJfaMiVz-uPIgROC17d3AMPQc"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZQxjcj-uPIgR9ViTYOdGqgI"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJAcihj0CuPIgRAb2vFb0CuJE"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJgxFrSUSuPIgRNMHA3whSTiA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJKZsHcD-uPIgRWNPeLQKzGis"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (3.6ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 1580ms (Views: 97.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tomukun&commit=Search+Map" for ::1 at 2016-11-17 01:21:52 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tomukun", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZQxjcj-uPIgR9ViTYOdGqgI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJV4YnDD-uPIgRj9JFDo-9QuA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZQxjcj-uPIgR9ViTYOdGqgI"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJV4YnDD-uPIgRj9JFDo-9QuA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJZQxjcj-uPIgR9ViTYOdGqgI"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 6535ms (Views: 96.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/places/62" for ::1 at 2016-11-17 01:22:17 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  Rendering places/show.html.erb within layouts/application
+  Rendered places/show.html.erb within layouts/application (0.8ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 103ms (Views: 98.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-17 01:22:23 -0500
+Processing by ApplicationController#index as HTML
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (2.7ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 103ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places" for ::1 at 2016-11-17 01:22:27 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (4.4ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 717ms (Views: 89.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/places" for ::1 at 2016-11-17 01:22:30 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJTS9-sUGuPIgRlLxFrS2fGdc"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJz7krEUGuPIgRnt-7dBVIo5k"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJO4FtEeeuPIgRnjJguoTWPgM"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJMx9D1A2wPIgR4rXIhkb5Cds"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (5.4ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+Completed 200 OK in 499ms (Views: 98.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/favorites" for ::1 at 2016-11-17 01:22:32 -0500
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  Rendered favorites/index.html.erb within layouts/application (0.5ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 114ms (Views: 111.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/1/edit" for ::1 at 2016-11-17 01:22:35 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/edit.html.erb within layouts/application (7.1ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 108ms (Views: 104.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-17 01:23:08 -0500
+Processing by ApplicationController#index as HTML
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (2.9ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+Completed 200 OK in 100ms (Views: 99.7ms | ActiveRecord: 0.0ms)
+
+

@@ -66,6 +66,8 @@ class PlacesController < ApplicationController
             marker.lng marker_object[:lng]
             marker.infowindow marker_object[:infowindow]
         end
+
+        @closest = Place.find_by(placeid: @places[0].place_id)
     end
 
     def show
