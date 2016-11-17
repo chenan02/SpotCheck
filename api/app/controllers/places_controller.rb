@@ -38,7 +38,10 @@ class PlacesController < ApplicationController
             else
                 Place.create(
                     placeid: placeid,
-                    occupancy: 5
+                    occupancy: 5,
+                    name: place.name,
+                    address: place.vicinity,
+                    category: place.types
                 )
                 @occupancies.push(5)
             end
@@ -66,14 +69,7 @@ class PlacesController < ApplicationController
     end
 
     def show
-        api_key = "AIzaSyClAPqmEMkzet9hUwkXdh8Qcg8FZg6e2qI"
-        #placeid = params[:placeid]
-        #url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=" + placeid + "&key=" + api_key
-        #uri = URI.parse(url)
-        #http = Net::HTTP.new(uri.host, uri.port)
-        #http.use_ssl = true
-        #req = Net::HTTP::Get.new(uri.request_uri)
-        #@place = JSON.parse(http.request(req).body)
+        @place = Place.find(params[:id])
     end
 
     def create
@@ -88,6 +84,10 @@ class PlacesController < ApplicationController
             return render json: { status: "ok", message: ":)" }
         end
         render json: { status: "error", message: ":(" }
+    end
+
+    def edit
+        @place = Place.find(params[:id])
     end
 
     def update
