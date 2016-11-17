@@ -8,7 +8,7 @@
         <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Map
       <% end %>
       <% if session[:user] %>
-        <%= link_to user_favorites_path(session[:user]), class: "btn btn-default navbar-btn" do %>
+        <%= link_to user_favorites_path(user_id: session[:user]["id"]), class: "btn btn-default navbar-btn" do %>
           <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Favorites
         <% end %>
         <%= link_to "Logout", logout_path, method: :delete, class: "btn btn-default navbar-btn pull-xs-right" %>

@@ -19,6 +19,8 @@
 </div>
 <br>
 <br>
-<div class="span7 text-center">
-<%= button_to "Favorites", favorites_path, id: "favorites-button", class: "btn btn-primary btn-lg", method: :get %>
+<% if session[:user] %>
+	<div class="span7 text-center">
+	<%= button_to "Favorites", user_favorites_path(user_id: session[:user]["id"]), id: "favorites-button", class: "btn btn-primary btn-lg", method: :get %>
+<% end %>
 </div>
