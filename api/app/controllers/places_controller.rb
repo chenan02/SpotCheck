@@ -4,13 +4,12 @@ class PlacesController < ApplicationController
         # lat = params[:lat]
         # lng = params[:lng]
         # if coming from localhost, doesnt know IP
+        lat = 42.2780
+        lng = -83.7382
         if Rails.env.production?
-            location = request.location
-            lat = location.latitude
-            lng = location.longitude
-        else
-            lat = 42.2780
-            lng = -83.7382
+            @location = request.location
+            lat = @location.latitude
+            lng = @location.longitude
         end
         query = params[:query]
         @client = GooglePlaces::Client.new(api_key)
@@ -30,9 +29,7 @@ class PlacesController < ApplicationController
         # end
 
         @occupancies = []
-        counts = []
         @places.each_with_index do |place, index|
-            counts.push(index)
             placeid = place.place_id
             place_db = Place.find_by(placeid: placeid)
             unless place_db.nil?
@@ -47,10 +44,24 @@ class PlacesController < ApplicationController
             end
         end
 
-        @markers = Gmaps4rails.build_markers(counts) do |count, marker|
-            marker.lat @places[count].lat
-            marker.lng @places[count].lng
-            marker.infowindow @occupancies[count].to_s
+        #compose markers
+        @marker_objects = []
+        @places.zip(@occupancies).each do |place, occupancy|
+            place_db = Place.find_by(placeid: place.place_id)
+            marker = {
+                lat: place.lat,
+                lng: place.lng,
+                infowindow: "<p>" + place.name + "</p>" +
+                    "<p>Occupancy: " + occupancy.to_s + "</p>" +
+                    '<a href="/places/' + place_db.id.to_s + '">Details</a>'
+            }
+            @marker_objects.push(marker)
+        end
+
+        @markers = Gmaps4rails.build_markers(@marker_objects) do |marker_object, marker|
+            marker.lat marker_object[:lat]
+            marker.lng marker_object[:lng]
+            marker.infowindow marker_object[:infowindow]
         end
     end
 

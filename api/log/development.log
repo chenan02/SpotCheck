@@ -7671,3 +7671,366 @@ Processing by PlacesController#index as HTML
 Completed 200 OK in 8112ms (Views: 171.9ms | ActiveRecord: 14.5ms)
 
 
+Started GET "/" for ::1 at 2016-11-16 19:32:07 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (266.1ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+Completed 200 OK in 501ms (Views: 490.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-16 19:32:11 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (5.8ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+Completed 200 OK in 983ms (Views: 93.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2016-11-16 19:38:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (250.9ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 507ms (Views: 496.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-16 19:38:48 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 6725ms (Views: 82.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-16 19:39:52 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (6.2ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+Completed 200 OK in 7023ms (Views: 223.0ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-16 19:46:42 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (453.0ms)
+  Rendered shared/_navbar.html.erb (2.5ms)
+Completed 200 OK in 2046ms (Views: 880.9ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-16 19:47:02 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (26.1ms)
+Completed 500 Internal Server Error in 274ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `location' for #<Geocoder::Result::Freegeoip:0x007fc0fc28abd0>):
+    16: <br>
+    17: <p><%= @places %></p>
+    18:  -->
+    19: <p> <%= @location.location %> </p>
+    20: <div class="col-xs-6 col-xs-offset-3">
+    21:   <div id="map" style='width: 100%; height: 400px;'></div>
+    22: </div>
+  
+app/views/places/index.html.erb:19:in `_app_views_places_index_html_erb___1109760156338601820_70233419892220'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.3ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (215.2ms)
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-16 19:47:17 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (6.2ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+Completed 200 OK in 382ms (Views: 202.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-11-16 23:44:10 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (6.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (254.2ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 520ms (Views: 511.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favorites" for ::1 at 2016-11-16 23:44:13 -0500
+Processing by FavoritesController#index as HTML
+  Rendering favorites/index.html.erb within layouts/application
+  Rendered favorites/index.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 127ms (Views: 124.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-16 23:44:22 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 635ms (ActiveRecord: 11.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `longitude' for nil:NilClass):
+    16: <br>
+    17: -->
+    18: <p><%= @places %></p>
+    19: <p> <%= @location.longitude %> </p>
+    20: <div class="col-xs-6 col-xs-offset-3">
+    21:   <div id="map" style='width: 100%; height: 400px;'></div>
+    22: </div>
+  
+app/views/places/index.html.erb:19:in `_app_views_places_index_html_erb___2275843003927634846_70222510347620'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.0ms)
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-16 23:44:47 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (3.2ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 8246ms (Views: 127.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-11-17 00:14:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (246.0ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 486ms (Views: 475.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-17 00:14:10 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 4768ms (ActiveRecord: 4.4ms)
+
+
+  
+TypeError (no implicit conversion of Fixnum into String):
+  
+app/controllers/places_controller.rb:54:in `+'
+app/controllers/places_controller.rb:54:in `block in index'
+app/controllers/places_controller.rb:49:in `each'
+app/controllers/places_controller.rb:49:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.0ms)
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-17 00:14:27 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (3.3ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 6766ms (Views: 86.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-17 00:15:16 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 4307ms (Views: 121.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-17 00:19:10 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (5.5ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 4859ms (Views: 145.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-17 00:29:26 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+SyntaxError (/Users/raja/Documents/classes/441/SpotCheck/api/app/controllers/places_controller.rb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
+            marker = {
+                  ^):
+  
+app/controllers/places_controller.rb:51: syntax error, unexpected tIDENTIFIER, expecting ')'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.5ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.3ms)
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-17 00:29:49 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3205ms (ActiveRecord: 4.3ms)
+
+
+  
+NameError (undefined local variable or method `place_id' for #<PlacesController:0x007f8034d86998>
+Did you mean?  place_db):
+  
+app/controllers/places_controller.rb:56:in `block in index'
+app/controllers/places_controller.rb:49:in `each'
+app/controllers/places_controller.rb:49:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (103.4ms)
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-17 00:30:03 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3312ms (ActiveRecord: 3.5ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/places_controller.rb:56:in `block in index'
+app/controllers/places_controller.rb:49:in `each'
+app/controllers/places_controller.rb:49:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.2ms)
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-17 00:32:23 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35mSQL (6.3ms)[0m  [1m[32mINSERT INTO "places" ("placeid", "occupancy", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["occupancy", 5.0], ["created_at", 2016-11-17 05:32:23 UTC], ["updated_at", 2016-11-17 05:32:23 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 712ms (ActiveRecord: 11.7ms)
+
+
+  
+TypeError (no implicit conversion of Fixnum into String):
+  
+app/controllers/places_controller.rb:56:in `+'
+app/controllers/places_controller.rb:56:in `block in index'
+app/controllers/places_controller.rb:49:in `each'
+app/controllers/places_controller.rb:49:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.0ms)
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-11-17 00:32:37 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."placeid" = $1 LIMIT $2[0m  [["placeid", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (250.7ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 2158ms (Views: 428.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/places/3" for ::1 at 2016-11-17 00:32:46 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering places/show.html.erb within layouts/application
+  Rendered places/show.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 136ms (Views: 134.0ms | ActiveRecord: 0.0ms)
+
+
