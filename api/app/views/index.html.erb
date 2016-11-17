@@ -3,7 +3,7 @@
 <div class="row">
   <div class="col-xs-4 col-xs-offset-4">
   	
-  	<%= form_tag "/places", method: "get", class: "input-group" do %>
+  	<%= form_tag places_path, method: "get", class: "input-group" do %>
   		<%= text_field_tag :query, nil, placeholder: "Search for...", class: "form-control" %>
   		<span class="input-group-btn">
   		<%= submit_tag "Search Map", id: "search-map-button", class: "btn btn-default" %>

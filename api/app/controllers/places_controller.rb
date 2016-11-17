@@ -14,19 +14,12 @@ class PlacesController < ApplicationController
         query = params[:query]
         @client = GooglePlaces::Client.new(api_key)
         @places = @client.spots(lat, lng, keyword: query, radius: 500)
-
-        # build hashes just to include occupancy and turn to json
-        # @placesarray = []
-        # @places.each do |place|
-        #     placesdict = {}
-        #     placesdict["placeid"] = place.place_id
-        #     placesdict["lat"] = place.lat
-        #     placesdict["lng"] = place.lng
-        #     placesdict["name"] = place.name
-        #     placesdict["address"] = place.vicinity
-        #     placesdict["type"] = place.types
-        #     @placesarray.push(placesdict)
-        # end
+        
+        if @places.empty?
+            # link to new_place_path
+            flash[:danger] = "Location not found. Create a new one?"
+            return redirect_to root_path
+        end
 
         @occupancies = []
         @places.each_with_index do |place, index|
@@ -68,10 +61,15 @@ class PlacesController < ApplicationController
         end
 
         @closest = Place.find_by(placeid: @places[0].place_id)
+
     end
 
     def show
         @place = Place.find(params[:id])
+        unless @place
+            flash[:danger] = "Location not found"
+            return redirect_to root_path
+        end
     end
 
     def create
@@ -82,23 +80,34 @@ class PlacesController < ApplicationController
             type: params[:type],
             description: params[:description]
         )
-        if @place.save
-            return render json: { status: "ok", message: ":)" }
+        unless @place.save
+            flash[:danger] = "Place already exists"
+            # should be new_place_path
+            return redirect_to root_path
         end
-        render json: { status: "error", message: ":(" }
+        redirect_to place_path(@place)
     end
 
     def edit
         @place = Place.find(params[:id])
+        unless @place
+            flash[:danger] = "Location not found"
+            return redirect_to root_path
+        end
     end
 
     def update
-        @place = Place.where(address: params[:address])
-        average = (params[:occupancy] + @place.occupancy)/2
-        if @place.update(occupancy: average)
-            return render json: { status: "ok", message: ":)" }
+        @place = Place.find(params[:id])
+        unless @place
+            flash[:danger] = "Place not found"
+            return redirect_to root_path
         end
-        render json: { status: "error", message: ":(" }        
+        average = (params[:occupancy].to_f + @place.occupancy)/2
+        unless @place.update(occupancy: average)
+            flash[:danger] = "Could not update place"
+            return redirect_to edit_place_path(@place)
+        end
+        redirect_to place_path(@place)
     end
 
     def destroy

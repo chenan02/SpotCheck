@@ -13,9 +13,11 @@
 </div>
 <br>
 
-
 <div class="span7 text-center">
-    <input id="check-map-button" class="btn btn-primary btn-lg" type="submit" value="Rate">
+<%= form_tag place_path(@place), method: :put do %>
+    <%= hidden_field_tag "occupancy", "" %>
+    <%= submit_tag "Rate", id: "check-map-button", class: "btn btn-primary btn-lg" %>
+<% end %>
 </div>
 <br>
 
@@ -29,7 +31,7 @@
 <br>
 
 <div id="share-rating">
-    <h3 id="share-rate-id"> Share your rating ! </h3>
+    <h3 id="share-rate-id"> Share your rating! </h3>
 </div>
 
 <div class="span7 text-center">
@@ -44,10 +46,11 @@
 
 <script>
     var ratings = document.getElementsByClassName('rating');
+    var occupancy_field = document.getElementById('occupancy');
     for (var i = 0; i < ratings.length; i++) {
         var r = new SimpleStarRating(ratings[i]);
         ratings[i].addEventListener('rate', function(e) {
-            console.log('Rating: ' + e.detail);
+            occupancy_field.value = e.detail;
         });
     }
 </script>

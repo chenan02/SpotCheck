@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <% flash.each do |type, msg| %>
+        <div id="flash_msg" class="alert alert-<%= type %>"> 
+          <button class="close" data-dimiss="alert"> x </button>
+          <strong><%= msg %></strong>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
