@@ -1,41 +1,57 @@
 class PlacesController < ApplicationController
     def index
         api_key = "AIzaSyClAPqmEMkzet9hUwkXdh8Qcg8FZg6e2qI"   
-        lat = params[:lat]
-        lng = params[:lng]
-        keyword = params[:keyword]
+        # lat = params[:lat]
+        # lng = params[:lng]
+        # if coming from localhost, doesnt know IP
+        if Rails.env.production?
+            location = request.location
+            lat = location.latitude
+            lng = location.longitude
+        else
+            lat = 42.2780
+            lng = -83.7382
+        end
+        query = params[:query]
         @client = GooglePlaces::Client.new(api_key)
-        @places = @client.spots(lat, lng, keyword: keyword, radius: 500)
+        @places = @client.spots(lat, lng, keyword: query, radius: 500)
 
         # build hashes just to include occupancy and turn to json
-        @placesarray = []
-        @places.each do |place|
-            placesdict = {}
-            placesdict["placeid"] = place.place_id
-            placesdict["lat"] = place.lat
-            placesdict["lng"] = place.lng
-            placesdict["name"] = place.name
-            placesdict["address"] = place.vicinity
-            placesdict["type"] = place.types
-            @placesarray.push(placesdict)
-        end
+        # @placesarray = []
+        # @places.each do |place|
+        #     placesdict = {}
+        #     placesdict["placeid"] = place.place_id
+        #     placesdict["lat"] = place.lat
+        #     placesdict["lng"] = place.lng
+        #     placesdict["name"] = place.name
+        #     placesdict["address"] = place.vicinity
+        #     placesdict["type"] = place.types
+        #     @placesarray.push(placesdict)
+        # end
 
+        @occupancies = []
+        counts = []
         @places.each_with_index do |place, index|
+            counts.push(index)
             placeid = place.place_id
-            findplace = Place.find_by(placeid: placeid)
-            unless findplace.nil?
-                occupancy = findplace.occupancy
-                @placesarray[index]["occupancy"] = occupancy
+            place_db = Place.find_by(placeid: placeid)
+            unless place_db.nil?
+                occupancy = place_db.occupancy
+                @occupancies.push(occupancy)
             else
                 Place.create(
                     placeid: placeid,
                     occupancy: 5
                 )
-                @placesarray[index]["occupancy"] = 5
+                @occupancies.push(5)
             end
         end
-        @placesarray.map { |x| x.to_json }
-        render json: @placesarray
+
+        @markers = Gmaps4rails.build_markers(counts) do |count, marker|
+            marker.lat @places[count].lat
+            marker.lng @places[count].lng
+            marker.infowindow @occupancies[count].to_s
+        end
     end
 
     def show

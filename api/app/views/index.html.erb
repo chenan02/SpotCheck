@@ -1,25 +1,24 @@
 <%= image_tag "App_Logo.png", id: "logo" %>
-
 <h1> What do you want to do? </h1>
 <div class="row">
   <div class="col-xs-4 col-xs-offset-4">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
-      <span class="input-group-btn">
-        <button id="search-map-button" class="btn btn-default" type="button">Search Map</button>
-      </span>
-    </div>
+  	
+  	<%= form_tag "/places", method: "get", class: "input-group" do %>
+  		<%= text_field_tag :query, nil, placeholder: "Search for...", class: "form-control" %>
+  		<span class="input-group-btn">
+  		<%= submit_tag "Search Map", id: "search-map-button", class: "btn btn btn-default" %>
+  		</span>
+	<% end %>
     <br>
   </div>
 </div>
 
 <h1> What's nearby? </h1>
 <div class="span7 text-center">
-	<input id="check-map-button" class="btn btn-primary btn-lg" type="submit" value="Check Map">
+	<%= button_to "Check Map", places_path, id: "check-map-button", class: "btn btn-primary btn-lg", method: :get %>
 </div>
-
 <br>
 <br>
 <div class="span7 text-center">
-	<input id="favorites-button" class="btn btn-primary btn-lg" type="submit" value="Favorites">
+<%= button_to "Favorites", favorites_path, id: "favorites-button", class: "btn btn-primary btn-lg", method: :get %>
 </div>

@@ -1,3 +1,4 @@
+<%= javascript_include_tag 'map' %>
 <div class="row">
   <div class="col-xs-4 col-xs-offset-4">
     <div class="input-group">
@@ -9,15 +10,14 @@
     <br>
   </div>
 </div>
-
-<div id="map">
-  <iframe
-    width="600"
-    height="450"
-    frameborder="0" style="border:solid"
-    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBTti8ykzz1efZDHSICIfOsL75MSPRWD0Q
-      &q=Space+Needle,Seattle+WA" allowfullscreen>
-  </iframe>
+<!-- <%= @occupancies.each do |occupancy| %>
+  <p><%= occupancy %></p>
+<% end %>
+<br>
+<p><%= @places %></p>
+ -->
+<div class="col-xs-6 col-xs-offset-3">
+  <div id="map" style='width: 100%; height: 400px;'></div>
 </div>
 
 <div class="location-div">
@@ -30,3 +30,16 @@
       <button type="button" class="btn btn-default">Favorite</button>
   </div>
 </div>  
+<script>
+
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers(<%=raw @markers.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+    
+</script>
+<!-- <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALhlJTIEnwDA5_hVOIsF1-tHuUar6CLm8&callback=initMap">
+</script> -->
