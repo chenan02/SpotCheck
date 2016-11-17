@@ -1,37 +1,34 @@
 class FavoritesController < ApplicationController
     def index
+        user_id = params[:user_id]
+        @user = User.find(user_id)
+        @places = @user.places
     end
-    
+
     def create
-        deviceid = params[:deviceid]
-        placeid = params[:placeid]
+        user_id = params[:user_id]
+        place_id = params[:place_id]
         @favorite = Favorite.new(
-            deviceid: deviceid,
-            placeid: placeid
+            user_id: user_id,
+            place_id: place_id
         )
-        if @favorite.save
-            #msg = { status: "ok", message: "success :)" }
-            return render json: { status: "ok", message: ":)" }
+        unless @favorite.save
+            flash[:danger] = "Already favorited"
+            return redirect_to place_path(place_id)
         end
-            #msg = { status: "error", message: ":("}
-        render json: { status: "error", message: ":(" }
-        # respond_to do |format|     
-        #     format.json { render json: msg }
-        # end
+        flash[:success] = "Favorited!"
+        return redirect_to place_path(place_id)
     end
 
     def destroy
-        deviceid = params[:deviceid]
-        placeid = params[:placeid]
-        @favorite = Favorite.find_by(deviceid: deviceid, placeid: placeid)
-        if @favorite.destroy
-            #msg = { status: "ok", message: "success :)" }
-            return render json: { status: "ok", message: ":)" }
+        user_id = params[:user_id]
+        place_id = params[:place_id]
+        @favorite = Favorite.find_by(user_id: user_id, place_id: place_id)
+        unless @favorite.destroy
+            flash[:danger] = "Unable to unfavorite"
+            return redirect_to user_favorites_path
         end
-            #msg = { status: "error", message: ":(" }
-        render json: { status: "error", message: ":(" }
-        # respond_to do |format|
-        #     format.json { render json: msg }
-        # end
+        flash[:success] = "Unfavorited!"
+        return redirect_to user_favorites_path
     end
 end

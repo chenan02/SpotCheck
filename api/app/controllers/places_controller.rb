@@ -23,14 +23,14 @@ class PlacesController < ApplicationController
 
         @occupancies = []
         @places.each_with_index do |place, index|
-            placeid = place.place_id
-            place_db = Place.find_by(placeid: placeid)
+            place_id = place.place_id
+            place_db = Place.find_by(place_id: place_id)
             unless place_db.nil?
                 occupancy = place_db.occupancy
                 @occupancies.push(occupancy)
             else
                 Place.create(
-                    placeid: placeid,
+                    place_id: place_id,
                     occupancy: 5,
                     name: place.name,
                     address: place.vicinity,
@@ -43,7 +43,7 @@ class PlacesController < ApplicationController
         #compose markers
         @marker_objects = []
         @places.zip(@occupancies).each do |place, occupancy|
-            place_db = Place.find_by(placeid: place.place_id)
+            place_db = Place.find_by(place_id: place.place_id)
             marker = {
                 lat: place.lat,
                 lng: place.lng,
@@ -60,7 +60,7 @@ class PlacesController < ApplicationController
             marker.infowindow marker_object[:infowindow]
         end
 
-        @closest = Place.find_by(placeid: @places[0].place_id)
+        @closest = Place.find_by(place_id: @places[0].place_id)
 
     end
 

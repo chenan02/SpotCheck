@@ -1,0 +1,11 @@
+<div class="container login-container">
+
+  <%= form_tag(sessions_path, method: :post, class: "form-signin") do %>
+    <h1 class="form-signin-heading">Log In</h1>
+    <%= text_field_tag "username", "", placeholder: "Username", class: "form-control", autofocus: "", required: "" %>
+    <%= password_field_tag "password", "", placeholder: "Password", class: "form-control", required: "" %>
+    <%= submit_tag "Log in", class: "btn btn-lg btn-primary btn-block" %>
+
+  <% end %>
+
+</div>

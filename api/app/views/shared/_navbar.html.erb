@@ -1,14 +1,20 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <%= button_to root_path, class: "btn btn-default navbar-btn", method: :get do %>
+    <ul class="navbar-header nav navbar-nav">
+      <%= link_to root_path, class: "btn btn-default navbar-btn" do %>
         <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
       <% end %>
-      <%= button_to places_path, class: "btn btn-default navbar-btn", method: :get do %>
+      <%= link_to places_path, class: "btn btn-default navbar-btn" do %>
         <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Map
       <% end %>
-      <%= button_to favorites_path, class: "btn btn-default navbar-btn", method: :get do %>
-        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Favorites
+      <% if session[:user] %>
+        <%= link_to user_favorites_path(session[:user]), class: "btn btn-default navbar-btn" do %>
+          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Favorites
+        <% end %>
+        <%= link_to "Logout", logout_path, method: :delete, class: "btn btn-default navbar-btn pull-xs-right" %>
+      <% else %>
+        <%= link_to "Login", login_path, class: "btn btn-default navbar-btn pull-xs-right" %>
+        <%= link_to "Sign up", signup_path, class: "btn btn-default navbar-btn pull-xs-right" %> 
       <% end %>
     </div>
   </div>

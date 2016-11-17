@@ -1,7 +1,7 @@
 class CreatePlaces < ActiveRecord::Migration[5.0]
   def change
     create_table :places do |t|
-      t.string :placeid
+      t.string :place_id
       t.string :name
       t.float :occupancy
       t.string :address
