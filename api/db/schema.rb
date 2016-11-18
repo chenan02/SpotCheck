@@ -16,12 +16,12 @@ ActiveRecord::Schema.define(version: 20161117202118) do
   enable_extension "plpgsql"
 
   create_table "favorites", force: :cascade do |t|
-    t.integer  "place_id_id"
-    t.integer  "user_id_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["place_id_id"], name: "index_favorites_on_place_id_id", using: :btree
-    t.index ["user_id_id"], name: "index_favorites_on_user_id_id", using: :btree
+    t.integer  "place_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["place_id"], name: "index_favorites_on_place_id", using: :btree
+    t.index ["user_id"], name: "index_favorites_on_user_id", using: :btree
   end
 
   create_table "places", force: :cascade do |t|

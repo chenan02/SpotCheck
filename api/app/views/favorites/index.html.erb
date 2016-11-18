@@ -1,43 +1,19 @@
 <h1> Favorites </h1>
 <br>
 
-<div class="location-div">
-  Shapiro Undergraduate Library  
-  <h1 class="location-rating"> 3 </h1>
-  <div class="btn-group btn-group-lg location-options" role="group" aria-label="...">
-      <button type="button" class="btn btn-default">Map</button>
-      <button type="button" class="btn btn-default">Info</button>
-      <button type="button" class="btn btn-default">Rate</button>
-  </div>
-</div>
-<br>
-<div class="location-div">
-  Fishbowl  
-  <h1 class="location-rating"> 7 </h1>
-  <div class="btn-group btn-group-lg location-options" role="group" aria-label="...">
-      <button type="button" class="btn btn-default">Map</button>
-      <button type="button" class="btn btn-default">Info</button>
-      <button type="button" class="btn btn-default">Rate</button>
-  </div>
-</div>
-<br>
-<div class="location-div">
-  Hatcher Graduate Library  
-  <h1 class="location-rating"> 4 </h1>
-  <div class="btn-group btn-group-lg location-options" role="group" aria-label="...">
-      <button type="button" class="btn btn-default">Map</button>
-      <button type="button" class="btn btn-default">Info</button>
-      <button type="button" class="btn btn-default">Rate</button>
-  </div>
-</div>
-<br>
-<div class="location-div">
-  Ross School of Business 
-  <h1 class="location-rating"> 7 </h1>
-  <div class="btn-group btn-group-lg location-options" role="group" aria-label="...">
-      <button type="button" class="btn btn-default">Map</button>
-      <button type="button" class="btn btn-default">Info</button>
-      <button type="button" class="btn btn-default">Rate</button>
-  </div>
-</div>
-<br>
+<% if @places.empty? %>
+  <h2>No places to show</h2>
+<% else %>
+  <% @places.each do |place| %>
+    <div class="location-div">
+      <%= place.name %> 
+      <h1 class="location-rating"> <%= place.occupancy %> </h1>
+      <div class="btn-group btn-group-lg location-options" role="group" aria-label="...">
+          <%= button_to "Map", places_path, class: "btn btn-default", method: :get %>
+          <%= button_to "Info", place_path(place), class: "btn btn-default", method: :get %>
+          <%= button_to "Rate", edit_place_path(place), class: "btn btn-default", method: :get %>
+      </div>
+    </div>
+    <br>
+  <% end %>
+<% end %>

@@ -21,13 +21,16 @@
 </div>
 <br>
 
-<div class="add-to-favorites-div">
-    <h3 class="add-to-favorites"> Add to favorites! </h3>
-</div>
-
-<div class="span7 text-center">
-    <input id="check-map-button" class="btn btn-primary btn-lg" type="submit" value="Favorite">
-</div>
+<% if session[:user] %>
+    <div class="add-to-favorites-div">
+        <h3 class="add-to-favorites"> Add to favorites! </h3>
+    </div>
+    <div class="span7 text-center">
+        <%= form_tag user_favorites_path(user_id: session[:user]["id"], place_id: @place.id) do %>
+            <%= submit_tag "Favorite", id: "check-map-button", class: "btn btn-primary btn-lg" %>
+        <% end %>
+    </div>
+<% end %>
 <br>
 
 <div id="share-rating">
