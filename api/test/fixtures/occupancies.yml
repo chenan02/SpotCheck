@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: MyString
+  score: 1.5
+  occupancyday: one
+
+two:
+  time: MyString
+  score: 1.5
+  occupancyday: two
