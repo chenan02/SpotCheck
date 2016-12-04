@@ -21,35 +21,43 @@ class PlacesController < ApplicationController
             return redirect_to root_path
         end
 
-        @occupancies = []
+        #@occupancies = []
+        @places_db = []
         @places.each_with_index do |place, index|
             place_id = place.place_id
             place_db = Place.find_by(place_id: place_id)
             unless place_db.nil?
-                occupancy = place_db.occupancy
-                @occupancies.push(occupancy)
+                #occupancy = place_db.occupancy
+                #@occupancies.push(occupancy)
+                @places_db.push(place_db)
             else
-                Place.create(
+                # error message here? Not needed?
+                new_place = Place.create(
                     place_id: place_id,
-                    occupancy: 5,
+                    occupancy: 3,
                     name: place.name,
                     address: place.vicinity,
+                    lat: place.lat,
+                    lng: place.lng,
                     category: place.types
                 )
-                @occupancies.push(5)
+                #@occupancies.push(5)
+                @places_db.push(new_place)
             end
         end
 
         #compose markers
         @marker_objects = []
-        @places.zip(@occupancies).each do |place, occupancy|
-            place_db = Place.find_by(place_id: place.place_id)
+        #@places.zip(@occupancies).each do |place, occupancy|
+
+            #place_db = Place.find_by(place_id: place.place_id)
+        @places_db.each do |place|
             marker = {
                 lat: place.lat,
                 lng: place.lng,
                 infowindow: "<p>" + place.name + "</p>" +
-                    "<p>Occupancy: " + occupancy.to_s + "</p>" +
-                    '<a href="/places/' + place_db.id.to_s + '">Details</a>'
+                    "<p>Occupancy: " + place.occupancy.to_s + "</p>" +
+                    '<a href="/places/' + place.id.to_s + '">Details</a>'
             }
             @marker_objects.push(marker)
         end
@@ -60,7 +68,7 @@ class PlacesController < ApplicationController
             marker.infowindow marker_object[:infowindow]
         end
 
-        @closest = Place.find_by(place_id: @places[0].place_id)
+        #@closest = Place.find_by(place_id: @places[0].place_id)
 
     end
 
@@ -77,6 +85,8 @@ class PlacesController < ApplicationController
             name: params[:name],
             occupancy: params[:occupancy],
             address: params[:address],
+            lat: params[:lat],
+            lng: params[:lng],
             type: params[:type],
             description: params[:description]
         )
@@ -97,6 +107,7 @@ class PlacesController < ApplicationController
     end
 
     def update
+        @location = request.location
         @place = Place.find(params[:id])
         unless @place
             flash[:danger] = "Place not found"

@@ -5,6 +5,8 @@ class CreatePlaces < ActiveRecord::Migration[5.0]
       t.string :name
       t.float :occupancy
       t.string :address
+      t.string :lat
+      t.string :lng
       t.string :category
       t.text :description
 

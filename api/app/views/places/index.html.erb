@@ -12,19 +12,25 @@
 </div>
 
 <div class="col-xs-6 col-xs-offset-3">
-  <div id="map" style='width: 100%; height: 400px;'></div>
+  <div id="map" style="width: 100%; height: 400px;"></div>
 </div>
 
-<div class="location-div">
-  <%= @closest.name %> 
-  <h1 class="location-rating"> <%= @closest.occupancy %> </h1>
-  <div class="btn-group btn-group-lg location-options" role="group" aria-label="...">
+<% @places_db.each do |place| %>
+  <div class="location-div">
+    <%= place.name %> 
+    <h1 class="location-rating"> <%= place.occupancy %> </h1>
+    <div class="btn-group btn-group-lg location-options" role="group" aria-label="...">
 
-      <%= button_to "Map", places_path, class: "btn btn-default", method: :get %>
-      <%= button_to "Info", place_path(@closest), class: "btn btn-default", method: :get %>
-      <%= button_to "Rate", edit_place_path(@closest), class: "btn btn-default", method: :get %>
-  </div>
-</div>  
+        <%= button_to "Map", places_path, class: "btn btn-default", method: :get %>
+        <%= button_to "Info", place_path(place), class: "btn btn-default", method: :get %>
+        <%= button_to "Rate", edit_place_path(place), class: "btn btn-default", method: :get %>
+        <% if session[:user] %>
+          <%= button_to "Favorite", user_favorites_path(user_id: session[:user]["id"], place_id: place.id), class: "btn btn-default" %>
+        <% end %>
+        
+    </div>
+  </div>  
+<% end %>
 <script>
 
   handler = Gmaps.build('Google');
