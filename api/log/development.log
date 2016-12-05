@@ -16958,3 +16958,691 @@ Processing by PlacesController#index as HTML
 Completed 200 OK in 1353ms (Views: 195.0ms | ActiveRecord: 9.8ms)
 
 
+Started GET "/" for ::1 at 2016-12-04 11:28:01 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (6.5ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered shared/_flash_messages.html.erb (9.2ms)
+Completed 200 OK in 270ms (Views: 242.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=ugli&commit=Search+Map" for ::1 at 2016-12-04 11:28:04 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"ugli", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzbU38USuPIgRA37lIk4WV4Q"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (4.2ms)
+  Rendered shared/_navbar.html.erb (2.8ms)
+  Rendered shared/_flash_messages.html.erb (0.8ms)
+Completed 200 OK in 869ms (Views: 164.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 12:07:44 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (10.1ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered shared/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 368ms (Views: 365.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=bars+in+ann+arbor&commit=Search+Map" for ::1 at 2016-12-04 12:08:02 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"bars in ann arbor", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["name", "Ashley's"], ["occupancy", 3.0], ["address", "338 South State Street, Ann Arbor"], ["lat", "42.2780809"], ["lng", "-83.7410431"], ["category", "[\"bar\", \"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJdc9KAj-uPIgRF_bGdp6gks8"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJdc9KAj-uPIgRF_bGdp6gks8"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJdc9KAj-uPIgRF_bGdp6gks8"], ["name", "Bar Louie"], ["occupancy", 3.0], ["address", "401 East Liberty Street #200, Ann Arbor"], ["lat", "42.279593"], ["lng", "-83.7438628"], ["category", "[\"restaurant\", \"bar\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (6.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJgxFrSUSuPIgRNMHA3whSTiA"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJgxFrSUSuPIgRNMHA3whSTiA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJgxFrSUSuPIgRNMHA3whSTiA"], ["name", "Brown Jug Restaurant"], ["occupancy", 3.0], ["address", "1204 South University Avenue, Ann Arbor"], ["lat", "42.2747894"], ["lng", "-83.73427939999999"], ["category", "[\"bar\", \"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJFcckUUSuPIgRwZ7I82nO19E"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJFcckUUSuPIgRwZ7I82nO19E"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJFcckUUSuPIgRwZ7I82nO19E"], ["name", "The Blue Leprechaun"], ["occupancy", 3.0], ["address", "1220 South University Avenue, Ann Arbor"], ["lat", "42.2748893"], ["lng", "-83.7335311"], ["category", "[\"bar\", \"night_club\", \"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJnWc9bj-uPIgRWS8eGrYQqjs"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJnWc9bj-uPIgRWS8eGrYQqjs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJnWc9bj-uPIgRWS8eGrYQqjs"], ["name", "Scorekeepers"], ["occupancy", 3.0], ["address", "310 Maynard Street, Ann Arbor"], ["lat", "42.2788866"], ["lng", "-83.74238849999999"], ["category", "[\"bar\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJeY2nMUSuPIgR23r6dNopAv0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJeY2nMUSuPIgR23r6dNopAv0"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJeY2nMUSuPIgR23r6dNopAv0"], ["name", "Good Time Charley's"], ["occupancy", 3.0], ["address", "1140 South University Avenue, Ann Arbor"], ["lat", "42.2748004"], ["lng", "-83.7348311"], ["category", "[\"bar\", \"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJpfPAnkCuPIgRuqslOGuIOEk"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJpfPAnkCuPIgRuqslOGuIOEk"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJpfPAnkCuPIgRuqslOGuIOEk"], ["name", "Red Hawk Bar & Grill"], ["occupancy", 3.0], ["address", "316 South State Street, Ann Arbor"], ["lat", "42.278755"], ["lng", "-83.74105999999999"], ["category", "[\"bar\", \"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ3Xt0LkSuPIgRWWMNsJFwuVw"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ3Xt0LkSuPIgRWWMNsJFwuVw"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJ3Xt0LkSuPIgRWWMNsJFwuVw"], ["name", "Rendez-Vous Hookah Lounge"], ["occupancy", 3.0], ["address", "1110 South University Avenue, Ann Arbor"], ["lat", "42.2748295"], ["lng", "-83.73524830000001"], ["category", "[\"bar\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJZZG58j6uPIgR1ohn-NPf_Jw"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJZZG58j6uPIgR1ohn-NPf_Jw"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJZZG58j6uPIgR1ohn-NPf_Jw"], ["name", "Mani Osteria and Bar"], ["occupancy", 3.0], ["address", "341 East Liberty Street, Ann Arbor"], ["lat", "42.2796885"], ["lng", "-83.7442904"], ["category", "[\"bar\", \"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ-6EpZD-uPIgR0O9Zn3hKH_I"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ-6EpZD-uPIgR0O9Zn3hKH_I"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJ-6EpZD-uPIgR0O9Zn3hKH_I"], ["name", "HopCat"], ["occupancy", 3.0], ["address", "311 Maynard Street, Ann Arbor"], ["lat", "42.279109"], ["lng", "-83.74184609999999"], ["category", "[\"bar\", \"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["name", "Buffalo Wild Wings"], ["occupancy", 3.0], ["address", "205 South State Street, Ann Arbor"], ["lat", "42.28004659999999"], ["lng", "-83.74069539999999"], ["category", "[\"meal_takeaway\", \"bar\", \"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ50UHyEWuPIgRcgnmQJBsoRw"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ50UHyEWuPIgRcgnmQJBsoRw"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJ50UHyEWuPIgRcgnmQJBsoRw"], ["name", "Rick's American Cafe"], ["occupancy", 3.0], ["address", "611 Church Street, Ann Arbor"], ["lat", "42.27441200000001"], ["lng", "-83.7342578"], ["category", "[\"night_club\", \"bar\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJffhpbT-uPIgR6kS-N3VvjYU"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJffhpbT-uPIgR6kS-N3VvjYU"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJffhpbT-uPIgR6kS-N3VvjYU"], ["name", "Necto Nightclub"], ["occupancy", 3.0], ["address", "516 East Liberty Street, Ann Arbor"], ["lat", "42.2792037"], ["lng", "-83.74239850000001"], ["category", "[\"night_club\", \"bar\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJeY2nMUSuPIgRbA4Mf8FEcNQ"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJeY2nMUSuPIgRbA4Mf8FEcNQ"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJeY2nMUSuPIgRbA4Mf8FEcNQ"], ["name", "BTB Cantina"], ["occupancy", 3.0], ["address", "1140 South University Avenue, Ann Arbor"], ["lat", "42.2748382"], ["lng", "-83.7348049"], ["category", "[\"bar\", \"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (1.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ0518hECuPIgRQOgqLkeI6fA"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ0518hECuPIgRQOgqLkeI6fA"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJ0518hECuPIgRQOgqLkeI6fA"], ["name", "Sava's"], ["occupancy", 3.0], ["address", "216 South State Street, Ann Arbor"], ["lat", "42.2796826"], ["lng", "-83.7411067"], ["category", "[\"bar\", \"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJa0EaT0SuPIgRVFDfAJrjmig"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJa0EaT0SuPIgRVFDfAJrjmig"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJa0EaT0SuPIgRVFDfAJrjmig"], ["name", "Study Hall Lounge"], ["occupancy", 3.0], ["address", "1220 South University Avenue #9, Ann Arbor"], ["lat", "42.2748552"], ["lng", "-83.733474"], ["category", "[\"night_club\", \"bar\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJa8Hirj-uPIgRiGbHti7ESBo"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJa8Hirj-uPIgRiGbHti7ESBo"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJa8Hirj-uPIgRiGbHti7ESBo"], ["name", "babo"], ["occupancy", 3.0], ["address", "403 East Washington Street, Ann Arbor"], ["lat", "42.2804829"], ["lng", "-83.7437635"], ["category", "[\"restaurant\", \"cafe\", \"bar\", \"grocery_or_supermarket\", \"food\", \"store\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJZQxjcj-uPIgR9ViTYOdGqgI"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJZQxjcj-uPIgR9ViTYOdGqgI"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJZQxjcj-uPIgR9ViTYOdGqgI"], ["name", "Tomukun Noodle Bar"], ["occupancy", 3.0], ["address", "505 East Liberty Street #200, Ann Arbor"], ["lat", "42.2795502"], ["lng", "-83.74279179999999"], ["category", "[\"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["name", "Tios Mexican Cafe and Tequila Bar"], ["occupancy", 3.0], ["address", "401 East Liberty Street #2, Ann Arbor"], ["lat", "42.2796099"], ["lng", "-83.74337349999999"], ["category", "[\"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJEx4jLjyuPIgRx84WA1NZxkw"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJEx4jLjyuPIgRx84WA1NZxkw"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJEx4jLjyuPIgRx84WA1NZxkw"], ["name", "The Brow Bar"], ["occupancy", 3.0], ["address", "207 East Ann Street, Ann Arbor"], ["lat", "42.2797676"], ["lng", "-83.7405948"], ["category", "[\"beauty_salon\", \"hair_care\", \"spa\", \"health\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 17:08:03 UTC], ["updated_at", 2016-12-04 17:08:03 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (23.9ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered shared/_flash_messages.html.erb (0.8ms)
+Completed 200 OK in 1795ms (Views: 213.8ms | ActiveRecord: 39.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 18:46:31 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mUser Load (28.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (52.2ms)
+  Rendered shared/_navbar.html.erb (5.6ms)
+  Rendered shared/_flash_messages.html.erb (0.9ms)
+Completed 200 OK in 495ms (Views: 433.1ms | ActiveRecord: 28.6ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=fishbowl&commit=Search+Map" for ::1 at 2016-12-04 18:46:36 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"fishbowl", "commit"=>"Search Map"}
+  [1m[36mPlace Load (26.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ0b2YPEeuPIgRTFlABcuyzR8"], ["LIMIT", 1]]
+  [1m[35m (12.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (8.5ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ0b2YPEeuPIgRTFlABcuyzR8"], ["LIMIT", 1]]
+  [1m[35mSQL (27.7ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJ0b2YPEeuPIgRTFlABcuyzR8"], ["name", "Haven Hall"], ["occupancy", 3.0], ["address", "505 South State Street, Ann Arbor"], ["lat", "42.276339"], ["lng", "-83.739384"], ["category", "[\"university\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-04 23:46:36 UTC], ["updated_at", 2016-12-04 23:46:36 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (4.9ms)
+  Rendered shared/_navbar.html.erb (3.7ms)
+  Rendered shared/_flash_messages.html.erb (0.4ms)
+Completed 200 OK in 1078ms (Views: 271.2ms | ActiveRecord: 75.5ms)
+
+
+Started GET "/users/2/favorites" for ::1 at 2016-12-04 18:46:52 -0500
+Processing by FavoritesController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPlace Exists (6.9ms)[0m  [1m[34mSELECT  1 AS one FROM "places" INNER JOIN "favorites" ON "places"."id" = "favorites"."place_id" WHERE "favorites"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT "places".* FROM "places" INNER JOIN "favorites" ON "places"."id" = "favorites"."place_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered favorites/index.html.erb within layouts/application (26.3ms)
+  Rendered shared/_navbar.html.erb (2.8ms)
+  Rendered shared/_flash_messages.html.erb (1.0ms)
+Completed 200 OK in 359ms (Views: 265.4ms | ActiveRecord: 47.8ms)
+
+
+Started POST "/users/2/favorites?place_id=40" for ::1 at 2016-12-04 18:46:59 -0500
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"8NHT3TFuKzheSuuOhJLgGo8CWztP+899ec6BhnlE+zqQ239qI1xjPguQrwp9RtnNEBOUFGnXf+ZiTFnSKCwd+w==", "place_id"=>"40", "user_id"=>"2"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFavorite Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "favorites" WHERE "favorites"."place_id" = $1 AND "favorites"."user_id" = $2 LIMIT $3[0m  [["place_id", 40], ["user_id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "favorites" ("place_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["place_id", 40], ["user_id", 2], ["created_at", 2016-12-04 23:46:59 UTC], ["updated_at", 2016-12-04 23:46:59 UTC]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/places/40
+Completed 302 Found in 53ms (ActiveRecord: 35.2ms)
+
+
+Started GET "/places/40" for ::1 at 2016-12-04 18:46:59 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  Rendering places/show.html.erb within layouts/application
+  Rendered places/show.html.erb within layouts/application (5.6ms)
+  Rendered shared/_navbar.html.erb (3.2ms)
+  Rendered shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 202ms (Views: 195.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/2/favorites" for ::1 at 2016-12-04 18:47:02 -0500
+Processing by FavoritesController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering favorites/index.html.erb within layouts/application
+  [1m[36mPlace Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" INNER JOIN "favorites" ON "places"."id" = "favorites"."place_id" WHERE "favorites"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.7ms)[0m  [1m[34mSELECT "places".* FROM "places" INNER JOIN "favorites" ON "places"."id" = "favorites"."place_id" WHERE "favorites"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered favorites/index.html.erb within layouts/application (25.3ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+  Rendered shared/_flash_messages.html.erb (0.4ms)
+Completed 200 OK in 155ms (Views: 146.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/places/40/edit" for ::1 at 2016-12-04 18:47:41 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/edit.html.erb within layouts/application (15.4ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+  Rendered shared/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 126ms (Views: 117.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-04 20:13:09 -0500
+Processing by ApplicationController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering index.html.erb within layouts/application
+  Rendered index.html.erb within layouts/application (9.5ms)
+  Rendered shared/_navbar.html.erb (2.5ms)
+  Rendered shared/_flash_messages.html.erb (0.9ms)
+Completed 200 OK in 372ms (Views: 311.6ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-12-04 20:13:14 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (9.5ms)
+  Rendered shared/_navbar.html.erb (3.5ms)
+  Rendered shared/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 1109ms (Views: 332.1ms | ActiveRecord: 26.9ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-12-04 20:13:30 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+Completed 500 Internal Server Error in 345ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `text' for #<GooglePlaces::Spot:0x007fd56742be60>):
+  
+app/controllers/places_controller.rb:24:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.6ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (170.3ms)
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-12-04 20:13:41 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `body' for #<GooglePlaces::Spot:0x007fd560de95d0>):
+  
+app/controllers/places_controller.rb:24:in `index'
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (13.2ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/raja/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (163.2ms)
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-12-04 20:14:20 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (5.2ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+  Rendered shared/_flash_messages.html.erb (0.4ms)
+Completed 200 OK in 992ms (Views: 178.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-12-04 20:17:37 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJvVDvkDiuPIgRyEqOjFheWyM"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJvVDvkDiuPIgRyEqOjFheWyM"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJvVDvkDiuPIgRyEqOjFheWyM"], ["name", "University of Michigan"], ["occupancy", 3.0], ["address", "Ann Arbor"], ["lat", "42.2783714"], ["lng", "-83.7371794"], ["category", "[\"university\", \"premise\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["name", "Urban Outfitters"], ["occupancy", 3.0], ["address", "231 South State Street, Ann Arbor"], ["lat", "42.279462"], ["lng", "-83.74043999999999"], ["category", "[\"clothing_store\", \"shoe_store\", \"home_goods_store\", \"store\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["name", "Starbucks"], ["occupancy", 3.0], ["address", "222 South State Street, Ann Arbor"], ["lat", "42.2795601"], ["lng", "-83.7411071"], ["category", "[\"cafe\", \"food\", \"store\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzQ_7XDyuPIgReuoJA541_NA"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzQ_7XDyuPIgReuoJA541_NA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJzQ_7XDyuPIgReuoJA541_NA"], ["name", "Jolly Pumpkin Café & Brewery"], ["occupancy", 3.0], ["address", "311 South Main Street, Ann Arbor"], ["lat", "42.2791584"], ["lng", "-83.7484618"], ["category", "[\"cafe\", \"bar\", \"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["name", "Douglas J Aveda Institute"], ["occupancy", 3.0], ["address", "333 Maynard Street #201, Ann Arbor"], ["lat", "42.27822349999999"], ["lng", "-83.7416296"], ["category", "[\"beauty_salon\", \"spa\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["name", "Michigan Theater"], ["occupancy", 3.0], ["address", "603 East Liberty Street, Ann Arbor"], ["lat", "42.2795499"], ["lng", "-83.7417437"], ["category", "[\"movie_theater\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJja88sj2uPIgRNqaMZdFWKIA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJja88sj2uPIgRNqaMZdFWKIA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJja88sj2uPIgRNqaMZdFWKIA"], ["name", "Arbor Brewing Company Brewpub"], ["occupancy", 3.0], ["address", "114 East Washington Street, Ann Arbor"], ["lat", "42.28030979999999"], ["lng", "-83.7478008"], ["category", "[\"bar\", \"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["name", "Hill Auditorium & Burton Tower"], ["occupancy", 3.0], ["address", "North University Avenue, Ann Arbor"], ["lat", "42.2791027"], ["lng", "-83.7390375"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["name", "CVS"], ["occupancy", 3.0], ["address", "209 South State Street, Ann Arbor"], ["lat", "42.2798991"], ["lng", "-83.740465"], ["category", "[\"convenience_store\", \"health\", \"food\", \"store\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["name", "Bell Tower Hotel"], ["occupancy", 3.0], ["address", "300 South Thayer Street, Ann Arbor"], ["lat", "42.2792424"], ["lng", "-83.73990300000001"], ["category", "[\"lodging\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJq6qqqv6uPIgRdREvqcT9YGs"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJq6qqqv6uPIgRdREvqcT9YGs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJq6qqqv6uPIgRdREvqcT9YGs"], ["name", "Home Inspection Services, LLC"], ["occupancy", 3.0], ["address", "Ann Arbor"], ["lat", "42.2808256"], ["lng", "-83.7430378"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJZRjUST-uPIgRwEmBgSZ1Uv0"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJZRjUST-uPIgRwEmBgSZ1Uv0"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJZRjUST-uPIgRwEmBgSZ1Uv0"], ["name", "Tower Plaza"], ["occupancy", 3.0], ["address", "Ann Arbor"], ["lat", "42.27800269999999"], ["lng", "-83.742375"], ["category", "[\"premise\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["name", "Tower Plaza Condominium"], ["occupancy", 3.0], ["address", "555 East William Street, Ann Arbor"], ["lat", "42.27800269999999"], ["lng", "-83.742375"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJpeWyBT-uPIgRRoS_ttQJlK4"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJpeWyBT-uPIgRRoS_ttQJlK4"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJpeWyBT-uPIgRRoS_ttQJlK4"], ["name", "AT&T"], ["occupancy", 3.0], ["address", "407 East Liberty Street, Ann Arbor"], ["lat", "42.2795466"], ["lng", "-83.7433382"], ["category", "[\"electronics_store\", \"store\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJCTadrz6uPIgR8QNf0OTu-HQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJg1Ph_T2uPIgRb-I4xXj280k"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJg1Ph_T2uPIgRb-I4xXj280k"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJg1Ph_T2uPIgRb-I4xXj280k"], ["name", "Ann Arbor Hands-On Museum"], ["occupancy", 3.0], ["address", "220 East Ann Street, Ann Arbor"], ["lat", "42.2817215"], ["lng", "-83.7465573"], ["category", "[\"museum\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  [1m[35mSQL (22.0ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["name", "North Quadrangle Residential and Academic Complex"], ["occupancy", 3.0], ["address", "105 South State Street, Ann Arbor"], ["lat", "42.280738"], ["lng", "-83.7401718"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:17:38 UTC], ["updated_at", 2016-12-05 01:17:38 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (45.0ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+  Rendered shared/_flash_messages.html.erb (0.9ms)
+Completed 200 OK in 1690ms (Views: 191.1ms | ActiveRecord: 73.4ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-12-04 20:18:56 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (16.7ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+  Rendered shared/_flash_messages.html.erb (0.5ms)
+Completed 200 OK in 1793ms (Views: 195.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-12-04 20:20:36 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (8.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (11.1ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+  Rendered shared/_flash_messages.html.erb (1.0ms)
+Completed 200 OK in 1487ms (Views: 301.2ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-12-04 20:21:12 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJvVDvkDiuPIgRyEqOjFheWyM"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzQ_7XDyuPIgReuoJA541_NA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJja88sj2uPIgRNqaMZdFWKIA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJq6qqqv6uPIgRdREvqcT9YGs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJZRjUST-uPIgRwEmBgSZ1Uv0"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJpeWyBT-uPIgRRoS_ttQJlK4"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJCTadrz6uPIgR8QNf0OTu-HQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJg1Ph_T2uPIgRb-I4xXj280k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (46.6ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+  Rendered shared/_flash_messages.html.erb (0.8ms)
+Completed 200 OK in 817ms (Views: 272.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=ugli&commit=Search+Map" for ::1 at 2016-12-04 20:21:43 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"ugli", "commit"=>"Search Map"}
+  [1m[36mPlace Load (73.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzbU38USuPIgRA37lIk4WV4Q"], ["LIMIT", 1]]
+  [1m[36mPlace Load (3.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJvVDvkDiuPIgRyEqOjFheWyM"], ["LIMIT", 1]]
+  [1m[36mPlace Load (2.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJkyouNEauPIgRhYtgXkia_aM"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJkyouNEauPIgRhYtgXkia_aM"], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJkyouNEauPIgRhYtgXkia_aM"], ["name", "Ross School of Business,UM"], ["occupancy", 3.0], ["address", "701 Tappan Avenue, Ann Arbor"], ["lat", "42.272683"], ["lng", "-83.73760109999999"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:45 UTC], ["updated_at", 2016-12-05 01:21:45 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[35m (5.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["name", "University of Michigan School of Dentistry"], ["occupancy", 3.0], ["address", "1011 North University Avenue, Ann Arbor"], ["lat", "42.2787462"], ["lng", "-83.73632409999999"], ["category", "[\"dentist\", \"doctor\", \"health\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:45 UTC], ["updated_at", 2016-12-05 01:21:45 UTC]]
+  [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["name", "University of Michigan Law School"], ["occupancy", 3.0], ["address", "625 South State Street, Ann Arbor"], ["lat", "42.2743312"], ["lng", "-83.74012619999999"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:45 UTC], ["updated_at", 2016-12-05 01:21:45 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJA3q9y0WuPIgRVA6XbahB8Oc"], ["LIMIT", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJA3q9y0WuPIgRVA6XbahB8Oc"], ["LIMIT", 1]]
+  [1m[35mSQL (202.5ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJA3q9y0WuPIgRVA6XbahB8Oc"], ["name", "Pizza House"], ["occupancy", 3.0], ["address", "618 Church Street, Ann Arbor"], ["lat", "42.27430700000001"], ["lng", "-83.73483200000001"], ["category", "[\"meal_delivery\", \"meal_takeaway\", \"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:45 UTC], ["updated_at", 2016-12-05 01:21:45 UTC]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (12.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[35m (14.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (4.0ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["name", "Michigan League"], ["occupancy", 3.0], ["address", "911 North University Avenue, Ann Arbor"], ["lat", "42.2793092"], ["lng", "-83.7376884"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:46 UTC], ["updated_at", 2016-12-05 01:21:46 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["name", "Michigan Union"], ["occupancy", 3.0], ["address", "530 South State Street, Ann Arbor"], ["lat", "42.2751615"], ["lng", "-83.741489"], ["category", "[\"university\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:46 UTC], ["updated_at", 2016-12-05 01:21:46 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJgTbzgEauPIgRZSR8NLu5Pa4"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJgTbzgEauPIgRZSR8NLu5Pa4"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJgTbzgEauPIgRZSR8NLu5Pa4"], ["name", "International Institute"], ["occupancy", 3.0], ["address", "1080 South University Avenue, Ann Arbor"], ["lat", "42.27466939999999"], ["lng", "-83.7364652"], ["category", "[\"university\", \"school\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:46 UTC], ["updated_at", 2016-12-05 01:21:46 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJMaWqPEauPIgRV-TJfrKZwR4"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJMaWqPEauPIgRV-TJfrKZwR4"], ["LIMIT", 1]]
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJMaWqPEauPIgRV-TJfrKZwR4"], ["name", "The Tauber Institute for Global Operations"], ["occupancy", 3.0], ["address", "701 Tappan Avenue E2600, Ann Arbor"], ["lat", "42.2727303"], ["lng", "-83.73758099999999"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:46 UTC], ["updated_at", 2016-12-05 01:21:46 UTC]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ09HPT0SuPIgROrbLWR8U3Ro"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (3.2ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ09HPT0SuPIgROrbLWR8U3Ro"], ["LIMIT", 1]]
+  [1m[35mSQL (83.5ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJ09HPT0SuPIgROrbLWR8U3Ro"], ["name", "US Post Office"], ["occupancy", 3.0], ["address", "1214 South University Avenue s104, Ann Arbor"], ["lat", "42.2747556"], ["lng", "-83.73388349999999"], ["category", "[\"post_office\", \"finance\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:46 UTC], ["updated_at", 2016-12-05 01:21:46 UTC]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (2.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJgTbzgEauPIgRBOfm7MRB1ZQ"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJgTbzgEauPIgRBOfm7MRB1ZQ"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJgTbzgEauPIgRBOfm7MRB1ZQ"], ["name", "University of Michigan School of Social Work"], ["occupancy", 3.0], ["address", "1080 South University Avenue, Ann Arbor"], ["lat", "42.27466939999999"], ["lng", "-83.7364652"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:46 UTC], ["updated_at", 2016-12-05 01:21:46 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJgTbzgEauPIgRNj9qHfojVYY"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJgTbzgEauPIgRNj9qHfojVYY"], ["LIMIT", 1]]
+  [1m[35mSQL (20.2ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJgTbzgEauPIgRNj9qHfojVYY"], ["name", "Lieberthal-Rogel Center for Chinese Studies (LRCCS)"], ["occupancy", 3.0], ["address", "1080 S. University, Suite 4668 SSWB, Ann Arbor"], ["lat", "42.27468399999999"], ["lng", "-83.736491"], ["category", "[\"university\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:46 UTC], ["updated_at", 2016-12-05 01:21:46 UTC]]
+  [1m[35m (22.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (1.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (13.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ8a0-XUGuPIgRTBkBCHqEBjQ"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (61.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ8a0-XUGuPIgRTBkBCHqEBjQ"], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJ8a0-XUGuPIgRTBkBCHqEBjQ"], ["name", "University of Michigan Chemistry Building"], ["occupancy", 3.0], ["address", "930 North University Avenue, Ann Arbor"], ["lat", "42.2780183"], ["lng", "-83.7370191"], ["category", "[\"university\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:46 UTC], ["updated_at", 2016-12-05 01:21:46 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJe9bo80SuPIgR_uzh0JYEYCE"], ["LIMIT", 1]]
+  [1m[35m (46.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (19.0ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJe9bo80SuPIgR_uzh0JYEYCE"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJe9bo80SuPIgR_uzh0JYEYCE"], ["name", "University Towers"], ["occupancy", 3.0], ["address", "536 South Forest Avenue, Ann Arbor"], ["lat", "42.27524219999999"], ["lng", "-83.73333939999999"], ["category", "[\"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:46 UTC], ["updated_at", 2016-12-05 01:21:46 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (1.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJbbmqg0euPIgRzlnhZSj2z8g"], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (14.4ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJbbmqg0euPIgRzlnhZSj2z8g"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJbbmqg0euPIgRzlnhZSj2z8g"], ["name", "University of Michigan Museum of Art"], ["occupancy", 3.0], ["address", "525 South State Street, Ann Arbor"], ["lat", "42.2753993"], ["lng", "-83.7397348"], ["category", "[\"museum\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:46 UTC], ["updated_at", 2016-12-05 01:21:46 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (1.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mPlace Load (4.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJCfHfv0auPIgRvlg3ZIxFQyo"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (114.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJCfHfv0auPIgRvlg3ZIxFQyo"], ["LIMIT", 1]]
+  [1m[35mSQL (5.7ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJCfHfv0auPIgRvlg3ZIxFQyo"], ["name", "Bert's Cafe"], ["occupancy", 3.0], ["address", "Shapiro Library, 919 South University Avenue #3175, Ann Arbor"], ["lat", "42.27571189999999"], ["lng", "-83.7371587"], ["category", "[\"cafe\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:21:47 UTC], ["updated_at", 2016-12-05 01:21:47 UTC]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (398.9ms)
+  Rendered shared/_navbar.html.erb (3.6ms)
+  Rendered shared/_flash_messages.html.erb (2.0ms)
+Completed 200 OK in 5919ms (Views: 2481.1ms | ActiveRecord: 827.6ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=tios&commit=Search+Map" for ::1 at 2016-12-04 20:25:01 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"tios", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJL0nLAz-uPIgR9iMROI_YD7k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJvVDvkDiuPIgRyEqOjFheWyM"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJmc2HhECuPIgR7IvBFYUUPWQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ-3bRg0CuPIgRODtG17yNtCQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzQ_7XDyuPIgReuoJA541_NA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJvTb1cD-uPIgR7ZVG88qqzl8"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJja88sj2uPIgRNqaMZdFWKIA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJjY16hECuPIgRsQx8N7QtP7U"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJubfe_UCuPIgRAZBUPc-delk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJq6qqqv6uPIgRdREvqcT9YGs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ0ddXY0CuPIgRESjalhDyTPk"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJZRjUST-uPIgRwEmBgSZ1Uv0"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJLYc6Nj-uPIgRbqtWgr-EdsI"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJpeWyBT-uPIgRRoS_ttQJlK4"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJCTadrz6uPIgR8QNf0OTu-HQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJg1Ph_T2uPIgRb-I4xXj280k"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJy_fxa0CuPIgRWmk6N0CQ0u8"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (63.5ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+  Rendered shared/_flash_messages.html.erb (0.9ms)
+Completed 200 OK in 1567ms (Views: 225.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=charlies&commit=Search+Map" for ::1 at 2016-12-04 20:26:03 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"charlies", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJeY2nMUSuPIgR23r6dNopAv0"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJeY2nMUSuPIgRbA4Mf8FEcNQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.5ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJW8mt6ESuPIgRAuc_6v_xtMk"], ["name", "Kang's Korean Restaurant"], ["occupancy", 3.0], ["address", "1327 South University Avenue, Ann Arbor"], ["lat", "42.275209"], ["lng", "-83.732297"], ["category", "[\"restaurant\", \"food\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:26:05 UTC], ["updated_at", 2016-12-05 01:26:05 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJgxFrSUSuPIgRNMHA3whSTiA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.6ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJFcckUUSuPIgRwZ7I82nO19E"], ["LIMIT", 1]]
+  [1m[36mPlace Load (2.9ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ0518hECuPIgRQOgqLkeI6fA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (1.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJRYTP6ESuPIgRYDEBFXASCfI"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJRYTP6ESuPIgRYDEBFXASCfI"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "places" ("place_id", "name", "occupancy", "address", "lat", "lng", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["place_id", "ChIJRYTP6ESuPIgRYDEBFXASCfI"], ["name", "Maize and Blue Delicatessen"], ["occupancy", 3.0], ["address", "1329 South University Avenue, Ann Arbor"], ["lat", "42.27517999999999"], ["lng", "-83.732143"], ["category", "[\"meal_takeaway\", \"restaurant\", \"food\", \"store\", \"point_of_interest\", \"establishment\"]"], ["created_at", 2016-12-05 01:26:05 UTC], ["updated_at", 2016-12-05 01:26:05 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (11.1ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+  Rendered shared/_flash_messages.html.erb (1.0ms)
+Completed 200 OK in 2246ms (Views: 222.7ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/places/25" for ::1 at 2016-12-04 20:26:26 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering places/show.html.erb within layouts/application
+  Rendered places/show.html.erb within layouts/application (1.4ms)
+  Rendered shared/_navbar.html.erb (5.6ms)
+  Rendered shared/_flash_messages.html.erb (0.5ms)
+Completed 200 OK in 175ms (Views: 169.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/places/25/edit" for ::1 at 2016-12-04 20:26:58 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/edit.html.erb within layouts/application (7.2ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+  Rendered shared/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 207ms (Views: 195.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/places?utf8=%E2%9C%93&query=ugli&commit=Search+Map" for ::1 at 2016-12-04 20:27:54 -0500
+Processing by PlacesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"ugli", "commit"=>"Search Map"}
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzbU38USuPIgRA37lIk4WV4Q"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJvVDvkDiuPIgRyEqOjFheWyM"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJARfe5ziuPIgR45fpeFFOoVs"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJkyouNEauPIgRhYtgXkia_aM"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJARfe5ziuPIgR8ts0VPpTx0Q"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzzlfpEeuPIgR9V8tgo0uz2M"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJA3q9y0WuPIgRVA6XbahB8Oc"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJz7krEUGuPIgR6Sis9nXGYyE"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJm6MvgkeuPIgRijKnzq9YR_w"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJzTPS-kCuPIgRnn-LgmqKdAQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJgTbzgEauPIgRZSR8NLu5Pa4"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJMaWqPEauPIgRV-TJfrKZwR4"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ09HPT0SuPIgROrbLWR8U3Ro"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJgTbzgEauPIgRBOfm7MRB1ZQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJgTbzgEauPIgRNj9qHfojVYY"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJl1YrpECuPIgRm1WOQgwhqzA"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJ8a0-XUGuPIgRTBkBCHqEBjQ"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJe9bo80SuPIgR_uzh0JYEYCE"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJbbmqg0euPIgRzlnhZSj2z8g"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJLz40Wz-uPIgRninwiPe_f7c"], ["LIMIT", 1]]
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."place_id" = $1 LIMIT $2[0m  [["place_id", "ChIJCfHfv0auPIgRvlg3ZIxFQyo"], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered places/index.html.erb within layouts/application (17.2ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered shared/_flash_messages.html.erb (0.9ms)
+Completed 200 OK in 1411ms (Views: 266.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/places/57/edit" for ::1 at 2016-12-04 20:28:05 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"57"}
+  [1m[36mPlace Load (0.8ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/edit.html.erb within layouts/application (10.1ms)
+  Rendered shared/_navbar.html.erb (2.5ms)
+  Rendered shared/_flash_messages.html.erb (0.9ms)
+Completed 200 OK in 235ms (Views: 230.2ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/places/57" for ::1 at 2016-12-04 20:28:08 -0500
+Processing by PlacesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TJv2ZgKzlP1BspGrtVidD/dujovac3JoXa9aBeb0qKoskVrREIHc+xRo1S9MjKTYaH9BpPxfwvNGLYJRt5xOaw==", "occupancy"=>"", "commit"=>"Rate", "id"=>"57"}
+  [1m[36mPlace Load (1.2ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlace Exists (6.3ms)[0m  [1m[34mSELECT  1 AS one FROM "places" WHERE "places"."place_id" = $1 AND ("places"."id" != $2) LIMIT $3[0m  [["place_id", "ChIJkyouNEauPIgRhYtgXkia_aM"], ["id", 57], ["LIMIT", 1]]
+  [1m[35mSQL (33.6ms)[0m  [1m[33mUPDATE "places" SET "occupancy" = $1, "updated_at" = $2 WHERE "places"."id" = $3[0m  [["occupancy", 1.5], ["updated_at", 2016-12-05 01:28:08 UTC], ["id", 57]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/places/57
+Completed 302 Found in 80ms (ActiveRecord: 47.4ms)
+
+
+Started GET "/places/57" for ::1 at 2016-12-04 20:28:08 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"57"}
+  [1m[36mPlace Load (0.7ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  Rendering places/show.html.erb within layouts/application
+  Rendered places/show.html.erb within layouts/application (1.4ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+  Rendered shared/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 164ms (Views: 159.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/places/57/edit" for ::1 at 2016-12-04 20:28:11 -0500
+Processing by PlacesController#edit as HTML
+  Parameters: {"id"=>"57"}
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT  "places".* FROM "places" WHERE "places"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  Rendering places/edit.html.erb within layouts/application
+  Rendered places/edit.html.erb within layouts/application (7.0ms)
+  Rendered shared/_navbar.html.erb (2.5ms)
+  Rendered shared/_flash_messages.html.erb (0.9ms)
+Completed 200 OK in 173ms (Views: 169.3ms | ActiveRecord: 0.3ms)
+
+

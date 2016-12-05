@@ -14,11 +14,18 @@ class PlacesController < ApplicationController
         query = params[:query]
         @client = GooglePlaces::Client.new(api_key)
         @places = @client.spots(lat, lng, keyword: query, radius: 500)
-        
+
         if @places.empty?
             # link to new_place_path
             flash[:danger] = "Location not found. Create a new one?"
             return redirect_to root_path
+        end
+
+        # if a specific search, send another api request to get alternatives
+        if @places.length == 1
+            place = @places[0]
+            alternatives = @client.spots(place.lat, place.lng, types: place.types, radius: 500)
+            @places += alternatives
         end
 
         #@occupancies = []
@@ -69,7 +76,6 @@ class PlacesController < ApplicationController
         end
 
         #@closest = Place.find_by(place_id: @places[0].place_id)
-
     end
 
     def show
