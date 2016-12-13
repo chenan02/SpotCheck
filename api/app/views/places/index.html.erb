@@ -15,13 +15,18 @@
   <div id="map" style="width: 100%; height: 400px;"></div>
 </div>
 
-<% @places_db.each do |place| %>
+<% @places_db.zip(@occupancies_now) do |place, occupancy_now| %>
   <div class="location-div">
     <%= place.name %> 
-    <h1 class="location-rating"> <%= place.occupancy %> </h1>
+    <h1 class="location-rating"> <%= occupancy_now %> </h1>
     <div class="btn-group btn-group-lg location-options" role="group" aria-label="...">
 
-        <%= button_to "Map", places_path, class: "btn btn-default", method: :get %>
+        <%= form_tag places_path, method: "get", class: "map-form" do %>
+          <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+          <%= hidden_field_tag :lat, "" %>
+          <%= hidden_field_tag :lng, "" %>
+          <%= submit_tag "Map", class: "btn btn-default navbar-btn" %>
+        <% end %>
         <%= button_to "Info", place_path(place), class: "btn btn-default", method: :get %>
         <%= button_to "Rate", edit_place_path(place), class: "btn btn-default", method: :get %>
         <% if session[:user] %>

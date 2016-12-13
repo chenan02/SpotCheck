@@ -1,9 +1,12 @@
+<p id="geolocation_warning"></p>
 <%= image_tag "App_Logo.png", id: "logo" %>
 <h1> What do you want to do? </h1>
 <div class="row">
   <div class="col-xs-4 col-xs-offset-4">
   	
   	<%= form_tag places_path, method: "get", class: "input-group" do %>
+      <%= hidden_field_tag :lat %>
+      <%= hidden_field_tag :lng %>
   		<%= text_field_tag :query, nil, placeholder: "Search for...", class: "form-control" %>
   		<span class="input-group-btn">
   		<%= submit_tag "Search Map", id: "search-map-button", class: "btn btn-default" %>
@@ -24,3 +27,20 @@
 	<%= button_to "Favorites", user_favorites_path(user_id: session[:user]["id"]), id: "favorites-button", class: "btn btn-primary btn-lg", method: :get %>
 <% end %>
 </div>
+
+<script>
+var x = document.getElementsById("geolocation_warning");
+var lat = document.getElementById("lat");
+var lng = document.getElementById("lng");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    lat.value = position.coords.latitude;
+    lng.value = position.coords.longitude;
+}
+</script>

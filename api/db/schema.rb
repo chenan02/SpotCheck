@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20161202201119) do
   end
 
   create_table "occupancies", force: :cascade do |t|
-    t.string   "time"
+    t.integer  "time"
     t.float    "score"
     t.integer  "occupancy_day_id"
     t.datetime "created_at",       null: false
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20161202201119) do
 
   create_table "occupancy_days", force: :cascade do |t|
     t.integer  "place_id"
-    t.string   "name"
+    t.integer  "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["place_id"], name: "index_occupancy_days_on_place_id", using: :btree

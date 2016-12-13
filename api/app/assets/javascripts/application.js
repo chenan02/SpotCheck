@@ -17,3 +17,25 @@
 //= require_tree .
 //= require underscore
 //= require gmaps/google
+var map_forms = document.getElementsByClassName("map-form");
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+}
+// } else {
+//     x.innerHTML = "Geolocation is not supported by this browser.";
+// }
+
+function showPosition(position) {
+    if(!localStorage["lat"] || !localStorage["lng"]) {
+        console.log("STORING");
+        localStorage["lat"] = position.coords.latitude;
+        localStorage["lng"] = position.coords.longitude;
+    }
+    for(var i = 0; i < map_forms.length; ++i) {
+        map_forms[i].lat.value = localStorage["lat"];
+        map_forms[i].lng.value = localStorage["lng"];
+        console.log("SETTING VALUES");
+        console.log(map_forms[i].lat.value);
+        console.log(map_forms[i].lng.value);
+    }
+}

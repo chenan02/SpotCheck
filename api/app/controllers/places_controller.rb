@@ -8,8 +8,10 @@ class PlacesController < ApplicationController
         lng = -83.7382
         if Rails.env.production?
             @location = request.location
-            lat = @location.latitude
-            lng = @location.longitude
+            #lat = @location.latitude
+            #lng = @location.longitude
+            lat = params[:lat]
+            lng = params[:lng]
         end
         query = params[:query]
         @client = GooglePlaces::Client.new(api_key)
@@ -48,6 +50,20 @@ class PlacesController < ApplicationController
                     lng: place.lng,
                     category: place.types
                 )
+                #weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+                (0...7).each do |day|
+                    new_day = OccupancyDay.create(
+                        place_id: new_place.id,
+                        name: day #weekdays[day]
+                    )
+                    (0...24).each do |hour|
+                        new_occupancy = Occupancy.create(
+                            time: hour,
+                            score: 3,
+                            occupancy_day_id: new_day.id,
+                        )
+                    end
+                end
                 #@occupancies.push(5)
                 @places_db.push(new_place)
             end
@@ -74,7 +90,16 @@ class PlacesController < ApplicationController
             marker.lng marker_object[:lng]
             marker.infowindow marker_object[:infowindow]
         end
-
+        puts "length", @places_db.length
+        time = Time.new
+        @occupancies_now = []
+        @places_db.each do |place|
+            puts "PLACE ID ", place.id
+            occupancy_day = OccupancyDay.where(place_id: place.id, name: time.wday)
+            puts "occupancy_day_length", occupancy_day.id
+            occupancy_now = Occupancy.find_by(occupancy_day_id: occupancy_day.id, time: time.hour)
+            @occupancies_now.push(occupancy_now.score)
+        end
         #@closest = Place.find_by(place_id: @places[0].place_id)
     end
 
@@ -84,6 +109,10 @@ class PlacesController < ApplicationController
             flash[:danger] = "Location not found"
             return redirect_to root_path
         end
+        time = Time.new
+        occupancy_day = OccupancyDay.find_by(place_id: @place.id, name: time.wday)
+        @occupancies = occupancy_day.occupancies
+        puts @occupancies
     end
 
     def create

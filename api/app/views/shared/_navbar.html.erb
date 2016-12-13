@@ -4,8 +4,11 @@
       <%= link_to root_path, class: "btn btn-default navbar-btn" do %>
         <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
       <% end %>
-      <%= link_to places_path, class: "btn btn-default navbar-btn" do %>
-        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Map
+      <%= form_tag places_path, method: "get", class: "map-form" do %>
+        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+        <%= hidden_field_tag :lat, "" %>
+        <%= hidden_field_tag :lng, "" %>
+        <%= submit_tag "Map", class: "btn btn-default navbar-btn" %>
       <% end %>
       <% if session[:user] %>
         <%= link_to user_favorites_path(user_id: session[:user]["id"]), class: "btn btn-default navbar-btn" do %>
