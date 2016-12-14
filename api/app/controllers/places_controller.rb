@@ -52,7 +52,7 @@ class PlacesController < ApplicationController
         end
 
         #compose markers
-        time = Time.new
+        time = Time.now.in_time_zone("Eastern Time (US & Canada)")
         @marker_objects = []
         @occupancies_now = []
         @places_db.each do |place|
@@ -82,7 +82,7 @@ class PlacesController < ApplicationController
             flash[:danger] = "Location not found"
             return redirect_to root_path
         end
-        time = Time.new
+        time = Time.now.in_time_zone("Eastern Time (US & Canada)")
         @occupancy_day = OccupancyDay.find_by(place_id: @place.id, day: time.wday)
         @occupancy_now = @occupancy_day.occupancies[time.hour]
         @hours = ["12am", "1am", "2am", "3am", "4am", "5am", "6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm", "11pm"]
@@ -109,7 +109,7 @@ class PlacesController < ApplicationController
 
     def edit
         @place = Place.find(params[:id])
-        time = Time.now
+        time = Time.now.in_time_zone("Eastern Time (US & Canada)")
         @occupancy_day = OccupancyDay.find_by(place_id: @place.id, day: time.wday)
         unless @place
             flash[:danger] = "Location not found"

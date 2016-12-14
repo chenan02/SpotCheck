@@ -4,7 +4,7 @@ class OccupancyDaysController < ApplicationController
         occupancy_day = OccupancyDay.find(params[:id])
         place = occupancy_day.place
         #place = params[:place]
-        time = Time.now
+        time = Time.now.in_time_zone("Eastern Time (US & Canada)")
         # @place counts on @place being set in a controller action previous
         #occupancy_day = OccupancyDay.find_by(place_id: @place.id, day: time.wday)
         unless occupancy_day

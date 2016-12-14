@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
         user_id = params[:user_id]
         @user = User.find(user_id)
         @places = @user.places
-        time = Time.now
+        time = Time.now.in_time_zone("Eastern Time (US & Canada)")
         @occupancies = []
         @places.each do |place|
             occupancy_day = OccupancyDay.find_by(place_id: place.id, day: time.wday)
