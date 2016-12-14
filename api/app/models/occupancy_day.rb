@@ -1,5 +1,4 @@
 class OccupancyDay < ApplicationRecord
-  validates_presence_of :place_id, :name
+  validates_presence_of :place_id, :day
   belongs_to :place
-  has_many :occupancies
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202201119) do
+ActiveRecord::Schema.define(version: 20161214033552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,20 +24,12 @@ ActiveRecord::Schema.define(version: 20161202201119) do
     t.index ["user_id"], name: "index_favorites_on_user_id", using: :btree
   end
 
-  create_table "occupancies", force: :cascade do |t|
-    t.integer  "time"
-    t.float    "score"
-    t.integer  "occupancy_day_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.index ["occupancy_day_id"], name: "index_occupancies_on_occupancy_day_id", using: :btree
-  end
-
   create_table "occupancy_days", force: :cascade do |t|
+    t.integer  "day"
+    t.float    "occupancies",              array: true
     t.integer  "place_id"
-    t.integer  "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["place_id"], name: "index_occupancy_days_on_place_id", using: :btree
   end
 
@@ -46,8 +38,8 @@ ActiveRecord::Schema.define(version: 20161202201119) do
     t.string   "name"
     t.float    "occupancy"
     t.string   "address"
-    t.string   "lat"
-    t.string   "lng"
+    t.float    "lat"
+    t.float    "lng"
     t.string   "category"
     t.text     "description"
     t.datetime "created_at",  null: false
@@ -61,6 +53,5 @@ ActiveRecord::Schema.define(version: 20161202201119) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "occupancies", "occupancy_days"
   add_foreign_key "occupancy_days", "places"
 end
