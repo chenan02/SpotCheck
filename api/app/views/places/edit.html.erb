@@ -57,9 +57,9 @@
 <script>
     var rating = document.getElementsByClassName('rating');
     var occupancy_field = document.getElementById('occupancy');
-    for (var i = 0; i < ratings.length; i++) {
-        var r = new SimpleStarRating(ratings[i]);
-        ratings[i].addEventListener('rate', function(e) {
+    for (var i = 0; i < rating.length; i++) {
+        var r = new SimpleStarRating(rating[i]);
+        rating[i].addEventListener('rate', function(e) {
             occupancy_field.value = e.detail;
         });
     }

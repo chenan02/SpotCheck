@@ -27,20 +27,3 @@
 	<%= button_to "Favorites", user_favorites_path(user_id: session[:user]["id"]), id: "favorites-button", class: "btn btn-primary btn-lg", method: :get %>
 <% end %>
 </div>
-
-<script>
-var x = document.getElementsById("geolocation_warning");
-var lat = document.getElementById("lat");
-var lng = document.getElementById("lng");
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-function showPosition(position) {
-    lat.value = position.coords.latitude;
-    lng.value = position.coords.longitude;
-}
-</script>
