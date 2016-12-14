@@ -18,8 +18,8 @@
   <br>
   <div class="graph_fancy">
     <span class="bar"></span>
-    <% @occupancy_day.occupancies.each_with_index do |occupancy, index| %>
-      <span class="bar" style="height:<%= occupancy*20 %>%"; data-bar-label="<%= index %>" data-bar-value="<%= occupancy %>"></span>
+    <% @occupancy_day.occupancies.zip(@hours) do |occupancy, hour| %>
+      <span class="bar" style="height:<%= occupancy*20 %>%"; data-bar-label="<%= hour %>" data-bar-value="<%= occupancy %>"></span>
     <% end %>
   </div>
 
