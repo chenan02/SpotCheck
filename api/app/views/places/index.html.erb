@@ -20,12 +20,12 @@
     <%= place.name %> 
     <h1 class="location-rating"> <%= occupancy_now %> </h1>
     <div class="btn-group btn-group-lg location-options" role="group" aria-label="...">
-
+<!--    future dev: click "map" to see infowindow on map
         <%= form_tag places_path, method: "get", class: "map-form " do %>
           <%= hidden_field_tag :lat, "" %>
           <%= hidden_field_tag :lng, "" %>
           <%= submit_tag "Map", class: "btn btn-default" %>
-        <% end %>
+        <% end %> -->
         <%= button_to "Info", place_path(place), class: "btn btn-default", method: :get %>
         <%= button_to "Rate", edit_place_path(place), class: "btn btn-default", method: :get %>
         <% if session[:user] %>

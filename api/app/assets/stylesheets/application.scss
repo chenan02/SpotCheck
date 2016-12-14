@@ -209,15 +209,12 @@ hr {
     border-style: solid;
     border-color: black;
     height: 300px;
-    margin: 0 0 30px 0;
+    margin: 0 auto 30px auto;
     position: relative;
     white-space: nowrap;
     font-family: 'Oswald', sans-serif;
     font-size: 10px;
     width: 64%;
-
-
-
     background: yellow;
 }
 .graph_fancy:before { /* Y-axis label */
@@ -251,16 +248,12 @@ hr {
     margin: 0 0 0 1px;
     vertical-align: bottom;
     position: relative;
-    width: 8.12%;
+    width: 3.75%;
 
     background: black;
     cursor: pointer;
 }
-.graph_fancy .bar:first-child {
-    height: 100%;
-    margin: 0;
-    width: 0;
-}
+
 .graph_fancy .bar:hover {
     z-index: 100;
 
