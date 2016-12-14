@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     root 'application#index'
-    resources :places
+    resources :places do 
+        #put '/occupancy_day/:id', to: 'occupancy_day#update'
+        resources :occupancy_days
+    end
     resources :devices
     resources :users do
         resources :favorites

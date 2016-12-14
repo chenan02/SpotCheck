@@ -85,8 +85,8 @@ class PlacesController < ApplicationController
         @occupancies_now = []
         @places_db.each do |place|
             occupancy_day = OccupancyDay.find_by(place_id: place.id, day: time.wday)
-            rating = occupancy_day.occupancies[time.hour]
-            @occupancies_now.push(rating)
+            occupancy = occupancy_day.occupancies[time.hour]
+            @occupancies_now.push(occupancy)
         end
     end
 
@@ -97,11 +97,10 @@ class PlacesController < ApplicationController
             return redirect_to root_path
         end
         time = Time.new
-        occupancy_day = OccupancyDay.find_by(place_id: @place.id, name: time.wday)
-        @occupancies = occupancy_day.occupancies
-        puts @occupancies
+        @occupancy_day = OccupancyDay.find_by(place_id: @place.id, day: time.wday)
     end
 
+    # not used
     def create
         @place = Place.new(
             name: params[:name],
@@ -122,12 +121,15 @@ class PlacesController < ApplicationController
 
     def edit
         @place = Place.find(params[:id])
+        time = Time.now
+        @occupancy_day = OccupancyDay.find_by(place_id: @place.id, day: time.wday)
         unless @place
             flash[:danger] = "Location not found"
             return redirect_to root_path
         end
     end
 
+    # degredated, use to update place only. If updating rating, go to update occupancy_day
     def update
         @location = request.location
         @place = Place.find(params[:id])
@@ -135,7 +137,7 @@ class PlacesController < ApplicationController
             flash[:danger] = "Place not found"
             return redirect_to root_path
         end
-        average = (params[:occupancy].to_f + @place.occupancy)/2
+        #average = (params[:occupancy].to_f + @place.occupancy)/2
         unless @place.update(occupancy: average)
             flash[:danger] = "Could not update place"
             return redirect_to edit_place_path(@place)
@@ -143,6 +145,7 @@ class PlacesController < ApplicationController
         redirect_to place_path(@place)
     end
 
+    # not used
     def destroy
     end
 end

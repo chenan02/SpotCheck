@@ -8,13 +8,20 @@
 
 <br>
 
+<p class="text-center">0 stars - Empty</p>
+<p class="text-center">1 star - Almost no others</p>
+<p class="text-center">2 stars - Several others</p>
+<p class="text-center">3 stars - Moderately busy</p>
+<p class="text-center">4 stars - Uncomfortably packed</p>
+<p class="text-center">5 stars - Completely packed</p>
+
 <div class="rate">
   <span class="rating big-red" data-default-rating="0"></span>
 </div>
 <br>
 
 <div class="span7 text-center">
-<%= form_tag place_path(@place), method: :put do %>
+<%= form_tag place_occupancy_day_path(@occupancy_day, place_id: @place.id), method: :put do %>
     <%= hidden_field_tag "occupancy", "" %>
     <%= submit_tag "Rate", id: "check-map-button", class: "btn btn-primary btn-lg" %>
 <% end %>
@@ -48,7 +55,7 @@
 </div>
 
 <script>
-    var ratings = document.getElementsByClassName('rating');
+    var rating = document.getElementsByClassName('rating');
     var occupancy_field = document.getElementById('occupancy');
     for (var i = 0; i < ratings.length; i++) {
         var r = new SimpleStarRating(ratings[i]);
