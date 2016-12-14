@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 20161214033552) do
   create_table "places", force: :cascade do |t|
     t.string   "place_id"
     t.string   "name"
-    t.float    "occupancy"
     t.string   "address"
     t.float    "lat"
     t.float    "lng"

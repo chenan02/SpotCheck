@@ -3,7 +3,6 @@ class CreatePlaces < ActiveRecord::Migration[5.0]
     create_table :places do |t|
       t.string :place_id
       t.string :name
-      t.float :occupancy
       t.string :address
       t.float :lat
       t.float :lng

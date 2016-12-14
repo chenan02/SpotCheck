@@ -11,6 +11,7 @@ class OccupancyDaysController < ApplicationController
             flash[:danger] = "Place not found"
             return redirect_to root_path
         end
+        # put this in model before_save if: :occupancy_day_changed?
         occupancies = occupancy_day.occupancies
         occupancies[time.hour] = (occupancies[time.hour] + rating.to_f)/2
         unless occupancy_day.update(occupancies: occupancies)

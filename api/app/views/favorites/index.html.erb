@@ -4,10 +4,10 @@
 <% if @places.empty? %>
   <h2>No places to show</h2>
 <% else %>
-  <% @places.each do |place| %>
+  <% @places.zip(@occupancies) do |place, occupancy| %>
     <div class="location-div">
       <%= place.name %> 
-      <h1 class="location-rating"> <%= place.occupancy %> </h1>
+      <h1 class="location-rating"> <%= occupancy %> </h1>
       <div class="btn-group btn-group-lg location-options" role="group" aria-label="...">
           <%= button_to "Map", places_path, class: "btn btn-default", method: :get %>
           <%= button_to "Info", place_path(place), class: "btn btn-default", method: :get %>

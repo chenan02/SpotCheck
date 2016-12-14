@@ -3,6 +3,13 @@ class FavoritesController < ApplicationController
         user_id = params[:user_id]
         @user = User.find(user_id)
         @places = @user.places
+        time = Time.now
+        @occupancies = []
+        @places.each do |place|
+            occupancy_day = OccupancyDay.find_by(place_id: place.id, day: time.wday)
+            occupancy = occupancy_day.occupancies[time.hour]
+            @occupancies.push(occupancy)
+        end
     end
 
     def create
