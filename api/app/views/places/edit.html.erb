@@ -16,9 +16,8 @@
 <p class="text-center">5 stars - Completely packed</p>
 
 <div class="rate">
-  <span class="rating big-red" data-default-rating="0"></span>
+  <span class="rating big-red" data-default-rating="3"></span>
 </div>
-<br>
 
 <div class="span7 text-center">
 <%= form_tag place_occupancy_day_path(@occupancy_day, place_id: @place.id), method: :put do %>
@@ -55,7 +54,7 @@
 </div>
 
 <script>
-    var rating = document.getElementsByClassName('rating');
+    var ratings = document.getElementsByClassName('rating');
     var occupancy_field = document.getElementById('occupancy');
     for (var i = 0; i < ratings.length; i++) {
         var r = new SimpleStarRating(ratings[i]);

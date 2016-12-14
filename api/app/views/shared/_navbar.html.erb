@@ -1,14 +1,14 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <ul class="navbar-header nav navbar-nav">
+    <div class="navbar-header nav navbar-nav">
       <%= link_to root_path, class: "btn btn-default navbar-btn" do %>
         <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
       <% end %>
-      <%= form_tag places_path, method: "get", class: "map-form" do %>
+      <%= form_tag places_path, method: "get", class: "map-form btn btn-default navbar-btn" do %>
         <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
         <%= hidden_field_tag :lat, "" %>
         <%= hidden_field_tag :lng, "" %>
-        <%= submit_tag "Map", class: "btn btn-default navbar-btn" %>
+        <%= submit_tag "Map", id: "nav-bar-button-map" %>
       <% end %>
       <% if session[:user] %>
         <%= link_to user_favorites_path(user_id: session[:user]["id"]), class: "btn btn-default navbar-btn" do %>
